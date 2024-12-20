@@ -1,32 +1,30 @@
 <p align="center">
     <a href="https://rubocop.org#gh-light-mode-only"  target="_blank" rel="noopener">
-      <img height="120px" src="https://github.com/rubocop-lts/standard-rubocop-lts/raw/main/docs/images/logo/rubocop-light.svg?raw=true" alt="SVG RuboCop Logo, Copyright (c) 2014 Dimiter Petrov, CC BY-NC 4.0, see docs/images/logo/README.txt">
+      <img height="120px" src="https://github.com/rubocop-lts/rubocop-lts-rspec/raw/main/docs/images/logo/rubocop-light.svg?raw=true" alt="SVG RuboCop Logo, Copyright (c) 2014 Dimiter Petrov, CC BY-NC 4.0, see docs/images/logo/README.txt">
     </a>
     <a href="https://rubocop.org#gh-dark-mode-only"  target="_blank" rel="noopener">
-      <img height="120px" src="https://github.com/rubocop-lts/standard-rubocop-lts/raw/main/docs/images/logo/rubocop-dark.svg?raw=true" alt="SVG RuboCop Logo, Copyright (c) 2014 Dimiter Petrov, CC BY-NC 4.0, see docs/images/logo/README.txt">
+      <img height="120px" src="https://github.com/rubocop-lts/rubocop-lts-rspec/raw/main/docs/images/logo/rubocop-dark.svg?raw=true" alt="SVG RuboCop Logo, Copyright (c) 2014 Dimiter Petrov, CC BY-NC 4.0, see docs/images/logo/README.txt">
     </a>
     <a href="https://www.ruby-lang.org/" target="_blank" rel="noopener">
-      <img height="120px" src="https://github.com/rubocop-lts/standard-rubocop-lts/raw/main/docs/images/logo/ruby-logo.svg?raw=true" alt="Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5, see docs/images/logo/README.txt">
+      <img height="120px" src="https://github.com/rubocop-lts/rubocop-lts-rspec/raw/main/docs/images/logo/ruby-logo.svg?raw=true" alt="Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5, see docs/images/logo/README.txt">
     </a>
     <a href="https://semver.org/#gh-light-mode-only" target="_blank" rel="noopener">
-      <img height="120px" src="https://github.com/rubocop-lts/standard-rubocop-lts/raw/main/docs/images/logo/semver-light.svg?raw=true" alt="SemVer.org Logo by @maxhaz, see docs/images/logo/README.txt">
+      <img height="120px" src="https://github.com/rubocop-lts/rubocop-lts-rspec/raw/main/docs/images/logo/semver-light.svg?raw=true" alt="SemVer.org Logo by @maxhaz, see docs/images/logo/README.txt">
     </a>
     <a href="https://semver.org/#gh-dark-mode-only" target="_blank" rel="noopener">
-      <img height="120px" src="https://github.com/rubocop-lts/standard-rubocop-lts/raw/main/docs/images/logo/semver-dark.svg?raw=true" alt="SemVer.org Logo by @maxhaz, see docs/images/logo/README.txt">
+      <img height="120px" src="https://github.com/rubocop-lts/rubocop-lts-rspec/raw/main/docs/images/logo/semver-dark.svg?raw=true" alt="SemVer.org Logo by @maxhaz, see docs/images/logo/README.txt">
     </a>
 </p>
 
-# 🦾 Standard::Rubocop::Lts
+# 🦾 Rubocop::Lts::RSpec
 
-Extended [standard (Standard Ruby)][standardrb] config shims for all your finely-aged rubies,
+Extended [RuboCop::Lts][rlts] config shims for the RSpec-related Cop rules,
 back to Ruby version 1.8. Compatible with the `rubocop-lts` [gem family](#-a-gem-family).
 
 Use the rules standard gives you, and then add more,
 to increase your code's compatibility across multiple versions of Ruby.
 
 Only reach as far back as you need to go!
-
-[standardrb]: https://github.com/standardrb/standard
 
 ---
 
@@ -74,10 +72,10 @@ please support my efforts by making a donation, or becoming a sponsor.
 NOTE: You might be interested in [`rubocop-lts`][rlts] which sits as a higher level than, and depends on, this gem.
 It will enable your Ruby style rules to keep pace with whatever version of Ruby your project happens to be on!
 
-| Gem Name                      | Version                             | Downloads                                                            | CI                                                                    | Activity                                                                                                                                              |
-|-------------------------------|-------------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [`rubocop-lts`][⛳️lts-gh]     | [![Gem Version][⛳️lts-vi]][⛳️lts-g] | [![Total DL][🖇️lts-dti]][⛳️lts-g] [![DL Rank][🏘️lts-rti]][⛳️lts-g] | [![Current][🚎lts-cwfi]][🚎lts-cwf]                                   | [![Open Issues][📗lts-ioi]][📗lts-io] [![Closed Issues][🚀lts-ici]][🚀lts-ic] [![Open PRs][💄lts-poi]][💄lts-po] [![Closed PRs][👽lts-pci]][👽lts-pc] |
-| [`standard-rubocop-lts`][⛳️ini-gh] | [![Gem Version][⛳️ini-vi]][⛳️ini-g] | [![Total DL][🖇️ini-dti]][⛳️ini-g] [![DL Rank][🏘️ini-rti]][⛳️ini-g] | [![Current][🚎ini-cwfi]][🚎ini-cwf] [![Heads][🖐ini-hwfi]][🖐ini-hwf] | [![Open Issues][📗ini-ioi]][📗ini-io] [![Closed Issues][🚀ini-ici]][🚀ini-ic] [![Open PRs][💄ini-poi]][💄ini-po] [![Closed PRs][👽ini-pci]][👽ini-pc] |
+| Gem Name                        | Version                             | Downloads                                                            | CI                                                                    | Activity                                                                                                                                              |
+|---------------------------------|-------------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`rubocop-lts`][⛳️lts-gh]       | [![Gem Version][⛳️lts-vi]][⛳️lts-g] | [![Total DL][🖇️lts-dti]][⛳️lts-g] [![DL Rank][🏘️lts-rti]][⛳️lts-g] | [![Current][🚎lts-cwfi]][🚎lts-cwf]                                   | [![Open Issues][📗lts-ioi]][📗lts-io] [![Closed Issues][🚀lts-ici]][🚀lts-ic] [![Open PRs][💄lts-poi]][💄lts-po] [![Closed PRs][👽lts-pci]][👽lts-pc] |
+| [`rubocop-lts-rspec`][⛳️ini-gh] | [![Gem Version][⛳️ini-vi]][⛳️ini-g] | [![Total DL][🖇️ini-dti]][⛳️ini-g] [![DL Rank][🏘️ini-rti]][⛳️ini-g] | [![Current][🚎ini-cwfi]][🚎ini-cwf] [![Heads][🖐ini-hwfi]][🖐ini-hwf] | [![Open Issues][📗ini-ioi]][📗ini-io] [![Closed Issues][🚀ini-ici]][🚀ini-ic] [![Open PRs][💄ini-poi]][💄ini-po] [![Closed PRs][👽ini-pci]][👽ini-pc] |
 
 <!-- columnar badge #s for Project Health table:
 ⛳️
@@ -112,25 +110,25 @@ It will enable your Ruby style rules to keep pace with whatever version of Ruby 
 [⛳️lts-g]: https://rubygems.org/gems/rubocop-lts
 [⛳️lts-gh]: https://github.com/rubocop-lts/rubocop-lts
 
-[⛳️ini-vi]: http://img.shields.io/gem/v/standard-rubocop-lts.svg
-[🖇️ini-dti]: https://img.shields.io/gem/dt/standard-rubocop-lts.svg
-[🏘️ini-rti]: https://img.shields.io/gem/rt/standard-rubocop-lts.svg
-[🚎ini-cwf]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/current.yml
-[🚎ini-cwfi]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/current.yml/badge.svg
-[🖐ini-hwf]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/heads.yml
-[🖐ini-hwfi]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/heads.yml/badge.svg
-[🧮ini-lwf]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/legacy.yml
-[🧮ini-lwfi]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/legacy.yml/badge.svg
-[📗ini-io]: https://github.com/rubocop-lts/standard-rubocop-lts/issues
-[📗ini-ioi]: https://img.shields.io/github/issues-raw/rubocop-lts/standard-rubocop-lts
-[🚀ini-ic]: https://github.com/rubocop-lts/standard-rubocop-lts/issues?q=is%3Aissue+is%3Aclosed
-[🚀ini-ici]: https://img.shields.io/github/issues-closed-raw/rubocop-lts/standard-rubocop-lts
-[💄ini-po]: https://github.com/rubocop-lts/standard-rubocop-lts/pulls
-[💄ini-poi]: https://img.shields.io/github/issues-pr/rubocop-lts/standard-rubocop-lts
-[👽ini-pc]: https://github.com/rubocop-lts/standard-rubocop-lts/pulls?q=is%3Apr+is%3Aclosed
-[👽ini-pci]: https://img.shields.io/github/issues-pr-closed/rubocop-lts/standard-rubocop-lts
-[⛳️ini-g]: https://rubygems.org/gems/standard-rubocop-lts
-[⛳️ini-gh]: https://github.com/rubocop-lts/standard-rubocop-lts
+[⛳️ini-vi]: http://img.shields.io/gem/v/rubocop-lts-rspec.svg
+[🖇️ini-dti]: https://img.shields.io/gem/dt/rubocop-lts-rspec.svg
+[🏘️ini-rti]: https://img.shields.io/gem/rt/rubocop-lts-rspec.svg
+[🚎ini-cwf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/current.yml
+[🚎ini-cwfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/current.yml/badge.svg
+[🖐ini-hwf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/heads.yml
+[🖐ini-hwfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/heads.yml/badge.svg
+[🧮ini-lwf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/legacy.yml
+[🧮ini-lwfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/legacy.yml/badge.svg
+[📗ini-io]: https://github.com/rubocop-lts/rubocop-lts-rspec/issues
+[📗ini-ioi]: https://img.shields.io/github/issues-raw/rubocop-lts/rubocop-lts-rspec
+[🚀ini-ic]: https://github.com/rubocop-lts/rubocop-lts-rspec/issues?q=is%3Aissue+is%3Aclosed
+[🚀ini-ici]: https://img.shields.io/github/issues-closed-raw/rubocop-lts/rubocop-lts-rspec
+[💄ini-po]: https://github.com/rubocop-lts/rubocop-lts-rspec/pulls
+[💄ini-poi]: https://img.shields.io/github/issues-pr/rubocop-lts/rubocop-lts-rspec
+[👽ini-pc]: https://github.com/rubocop-lts/rubocop-lts-rspec/pulls?q=is%3Apr+is%3Aclosed
+[👽ini-pci]: https://img.shields.io/github/issues-pr-closed/rubocop-lts/rubocop-lts-rspec
+[⛳️ini-g]: https://rubygems.org/gems/rubocop-lts-rspec
+[⛳️ini-gh]: https://github.com/rubocop-lts/rubocop-lts-rspec
 
 ### 👪 A Gem Family
 
@@ -138,6 +136,7 @@ The `rubocop-lts` family of gems has a version supporting any version of Ruby yo
 They can be used as development dependencies for libraries or applications.
 
 - [`rubocop-lts`][rlts]
+- [`rubocop-lts-rspec`][rlts-rspec]
 - [`standard-rubocop-lts`][stdrlts]
 - [`rubocop-ruby1_8`][rr18]
 - [`rubocop-ruby1_9`][rr19]
@@ -154,6 +153,7 @@ They can be used as development dependencies for libraries or applications.
 - [`rubocop-ruby3_2`][rr32]
 
 [rlts]: https://rubocop-lts.gitlab.io/#installation-
+[rlts-rspec]: https://gitlab.com/rubocop-lts/rubocop-lts-rspec
 [stdrlts]: https://gitlab.com/rubocop-lts/standard-rubocop-lts
 [rr18]: https://gitlab.com/rubocop-lts/rubocop-ruby1_8
 [rr19]: https://gitlab.com/rubocop-lts/rubocop-ruby1_9
@@ -173,10 +173,12 @@ They can be used as development dependencies for libraries or applications.
 
 All releases of this gem are stable releases.
 We do not release new versions for every release of `rubocop`,
-as this gem is tied to [standard (Standard Ruby)][standardrb].
+as this gem is part of rubocop-lts, which is tied to [standard (Standard Ruby)][standardrb].
 A typical release cycle for a gem in the `rubocop-lts` family is roughly every six months,
-though eventually analysis support for an old version of Ruby will be dropped.
+though eventually analysis support for an old version of Ruby will become impossible,
+because of limitations of RuboCop.
 When that happens releases of the `rubocop-lts` gem for that version of Ruby will (mostly) cease.
+For now though, at the end of 2024, RuboCop can still be used with code targeting Ruby v1.8.7, and newer.
 
 ## ✨ Installation
 
@@ -188,89 +190,37 @@ If, OTOH, you want to use this gem directly, carry on!
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add standard-rubocop-lts
+    $ bundle add rubocop-lts-rspec
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install standard-rubocop-lts
+    $ gem install rubocop-lts-rspec
 
 ## 🔧 Basic Usage
 
-Add to the top of your project's `.rubocop.yml` configuration file:
+If you are using this gem standalone, add to the top of your project's `.rubocop.yml` configuration file:
 
 ```yaml
 inherit_gem:
   # Replace {RUBY_MAJOR_VERSION} with the minimum major version of ruby you want to target.
   # Replace {RUBY_MINOR_VERSION} with the minimum minor version of ruby you want to target.
-  standard-rubocop-lts: config/ruby-{RUBY_MAJOR_VERSION}-{RUBY_MINOR_VERSION}.yml
+  rubocop-lts-rspec: config/ruby-{RUBY_MAJOR_VERSION}-{RUBY_MINOR_VERSION}.yml
 ```
 
 <details>
   <summary>What will this do for me?</summary>
 
-Among other settings specific to your chosen minimum version of ruby,
+Among other potential settings specific to your chosen minimum version of ruby,
 the above _effectively_ results in the following config (& more):
 
 ```yaml
-# We want Exclude and Include directives from different
-#   config files to get merged, not overwritten
-inherit_mode:
-  merge:
-    - Exclude
-    - Include
-
-require:
-  - standard-rubocop-lts
-  - standard
-  - standard-performance
-  - standard-custom
-  - rubocop-performance
-
-# Load basic rules for this version of Ruby from standard.
-# Rules are overridden in a LIFO stack.
-# If rubocop-performance is listed first, and standard-performance after it,
-#   then rubocop-performance's rules will take precedence.
-# This is the opposite of what you might expect.
-# Below: standard's rules override rubocop-performance's (mostly disabling rules)
-inherit_gem:
-  standard: config/ruby-1.8.yml
-  standard-performance: config/ruby-1.8.yml
-  standard-custom: config/base.yml
-  rubocop-performance: config/default.yml
-
-AllCops:
-  NewCops: enable
-
-# See:
-#   https://github.com/rubocop/rubocop-performance/issues/240
-#   https://github.com/rubocop/rubocop-performance/pull/241
-Performance/Casecmp:
-  Enabled: false
-
-# See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1375527811
-Performance/BlockGivenWithExplicitBlock:
-  Enabled: false
-
-# See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1451511402
-Performance/ArraySemiInfiniteRangeSlice:
-  Enabled: false
-
-# See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1451511402
-Performance/BigDecimalWithNumericArgument:
-  Enabled: false
-
-# See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1451511402
-Performance/IoReadlines:
-  Enabled: false
-
-# Plus: Ruby-version-specific configs provided by "standard" family of gems
-# Plus+: Ruby-version-specific configs that standard does not have
+# TODO: Add example
 ```
 </details>
 
 ### What about TargetRubyVersion?
 
-**Instead of using this gem, `standard-rubocop-lts`, use `rubocop-lts`, which depends on this gem.
+**Instead of using this gem, `rubocop-lts`, use `rubocop-lts`, which depends on this gem.
 ```ruby
 # NOTE: Picking the right version of rubocop-lts automatically aligns:
 #       - gemspec's required_ruby_version
@@ -298,7 +248,7 @@ See [CONTRIBUTING.md][contributing]
 
 ## 🌈 Contributors
 
-[![Contributors](https://contrib.rocks/image?repo=rubocop-lts/standard-rubocop-lts)]("https://github.com/rubocop-lts/standard-rubocop-lts/graphs/contributors")
+[![Contributors](https://contrib.rocks/image?repo=rubocop-lts/rubocop-lts-rspec)]("https://github.com/rubocop-lts/rubocop-lts-rspec/graphs/contributors")
 
 Made with [contributors-img](https://contrib.rocks).
 
@@ -309,7 +259,7 @@ the [MIT License][license] [![License: MIT][license-img]][license-ref].
 See [LICENSE.txt][license] for the official [Copyright Notice][copyright-notice-explainer].
 
 <details>
-  <summary>Project Logos (standard-rubocop-lts)</summary>
+  <summary>Project Logos (rubocop-lts-rspec)</summary>
 
 See [docs/images/logo/README.txt][project-logos]
 </details>
@@ -322,7 +272,7 @@ Source: [Unsplash][org-logo-source]
 License: [Unsplash License][org-logo-license]
 </details>
 
-[project-logos]: https://github.com/rubocop-lts/standard-rubocop-lts/blob/main/docs/images/logo/README.txt
+[project-logos]: https://github.com/rubocop-lts/rubocop-lts-rspec/blob/main/docs/images/logo/README.txt
 [org-logo-author]: https://unsplash.com/@yusufevli
 [org-logo-source]: https://unsplash.com/photos/yaSLNLtKRIU
 [org-logo-license]: https://unsplash.com/license
@@ -333,7 +283,7 @@ License: [Unsplash License][org-logo-license]
 
 ## 🤝 Code of Conduct
 
-Everyone interacting in this project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/rubocop-lts/standard-rubocop-lts/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in this project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/rubocop-lts/rubocop-lts-rspec/blob/main/CODE_OF_CONDUCT.md).
 
 ## 📌 Versioning
 
@@ -348,27 +298,27 @@ the [Pessimistic Version Constraint][pvc] with two digits of precision.
 For example:
 
 ```ruby
-spec.add_dependency "standard-rubocop-lts", "~> 1.0"
+spec.add_dependency "rubocop-lts-rspec", "~> 1.0"
 ```
 
 [aboutme]: https://about.me/peter.boling
-[actions]: https://github.com/rubocop-lts/standard-rubocop-lts/actions
+[actions]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions
 [angelme]: https://angel.co/peter-boling
-[blogpage]: http://www.railsbling.com/tags/standard-rubocop-lts/
-[codecov_coverage]: https://codecov.io/gh/rubocop-lts/standard-rubocop-lts
-[code_triage]: https://www.codetriage.com/rubocop-lts/standard-rubocop-lts
-[chat]: https://gitter.im/rubocop-lts/standard-rubocop-lts?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-[climate_coverage]: https://codeclimate.com/github/rubocop-lts/standard-rubocop-lts/test_coverage
-[climate_maintainability]: https://codeclimate.com/github/rubocop-lts/standard-rubocop-lts/maintainability
+[blogpage]: http://www.railsbling.com/tags/rubocop-lts-rspec/
+[codecov_coverage]: https://codecov.io/gh/rubocop-lts/rubocop-lts-rspec
+[code_triage]: https://www.codetriage.com/rubocop-lts/rubocop-lts-rspec
+[chat]: https://gitter.im/rubocop-lts/rubocop-lts-rspec?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+[climate_coverage]: https://codeclimate.com/github/rubocop-lts/rubocop-lts-rspec/test_coverage
+[climate_maintainability]: https://codeclimate.com/github/rubocop-lts/rubocop-lts-rspec/maintainability
 [copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
-[conduct]: https://github.com/rubocop-lts/standard-rubocop-lts/blob/main/CODE_OF_CONDUCT.md
-[contributing]: https://github.com/rubocop-lts/standard-rubocop-lts/blob/main/CONTRIBUTING.md
+[conduct]: https://github.com/rubocop-lts/rubocop-lts-rspec/blob/main/CODE_OF_CONDUCT.md
+[contributing]: https://github.com/rubocop-lts/rubocop-lts-rspec/blob/main/CONTRIBUTING.md
 [devto]: https://dev.to/galtzo
-[documentation]: https://rubydoc.info/github/rubocop-lts/standard-rubocop-lts/main
+[documentation]: https://rubydoc.info/github/rubocop-lts/rubocop-lts-rspec/main
 [followme]: https://img.shields.io/twitter/follow/galtzo.svg?style=social&label=Follow
-[gh_discussions]: https://github.com/rubocop-lts/standard-rubocop-lts/discussions
+[gh_discussions]: https://github.com/rubocop-lts/rubocop-lts-rspec/discussions
 [gh_sponsors]: https://github.com/sponsors/pboling
-[issues]: https://github.com/rubocop-lts/standard-rubocop-lts/issues
+[issues]: https://github.com/rubocop-lts/rubocop-lts-rspec/issues
 [liberapay_donate]: https://liberapay.com/pboling/donate
 [license]: LICENSE.txt
 [license-ref]: https://opensource.org/licenses/MIT
@@ -376,8 +326,8 @@ spec.add_dependency "standard-rubocop-lts", "~> 1.0"
 [peterboling]: http://www.peterboling.com
 [pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
 [railsbling]: http://www.railsbling.com
-[rubygems]: https://rubygems.org/gems/standard-rubocop-lts
-[security]: https://github.com/rubocop-lts/standard-rubocop-lts/blob/main/SECURITY.md
+[rubygems]: https://rubygems.org/gems/rubocop-lts-rspec
+[security]: https://github.com/rubocop-lts/rubocop-lts-rspec/blob/main/SECURITY.md
 [semver]: http://semver.org/
-[source]: https://github.com/rubocop-lts/standard-rubocop-lts/
+[source]: https://github.com/rubocop-lts/rubocop-lts-rspec/
 [tweetme]: http://twitter.com/galtzo
