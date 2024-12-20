@@ -1,0 +1,38 @@
+require:
+  - rubocop-md
+  - rubocop-packaging
+  - rubocop-rake
+  - rubocop-rspec
+  - rubocop-thread_safety
+  # RuboCop Gradual can be used in "Require mode", which is a way to replace rubocop with rubocop-gradual:
+  - rubocop/gradual/patch
+
+inherit_gem:
+  rubocop-shopify: rubocop.yml
+  rspec-block_is_expected: rubocop.yml
+
+# NOTE: Would make sense to track spec.required_ruby_version in the gemspec,
+#       However, it is more valuable to dog-food every config this gem provides by loading config/ruby-1.8.yml
+inherit_from:
+  - config/ruby-1.8.yml
+
+AllCops:
+  # When the Ruby community, via RuboCop, adopts a new standard
+  #   (with additional filtering by standard.rb and rubocop-shopify) it is good enough for us!
+  NewCops: enable
+  TargetRubyVersion: 2.7
+
+# Metrics cops are disabled in Standard by default
+Metrics:
+  Enabled: true
+
+# Ruby specific customizations
+Layout/LineLength:
+  Max: 120
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+  Enabled: true
