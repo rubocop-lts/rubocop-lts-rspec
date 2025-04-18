@@ -1,5 +1,4 @@
-inherit_from: ./base.yml
+inherit_from: ./ruby-3.4.yml
 
-# TODO: December 25, 2023
-#AllCops:
-#  TargetRubyVersion: 3.3
+AllCops:
+  TargetRubyVersion: 3.3

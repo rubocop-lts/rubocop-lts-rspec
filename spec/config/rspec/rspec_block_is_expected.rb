@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "rspec/block_is_expected"
 
 # This breaks RSpec v2, which may be used to run transpec.

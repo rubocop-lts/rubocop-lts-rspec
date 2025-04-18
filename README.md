@@ -298,7 +298,7 @@ the [Pessimistic Version Constraint][pvc] with two digits of precision.
 For example:
 
 ```ruby
-spec.add_dependency "rubocop-lts-rspec", "~> 1.0"
+spec.add_dependency("rubocop-lts-rspec", "~> 1.0")
 ```
 
 [aboutme]: https://about.me/peter.boling

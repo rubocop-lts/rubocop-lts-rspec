@@ -1,0 +1,49 @@
+name: Dogfood
+
+permissions:
+  contents: read
+
+env:
+  K_SOUP_COV_DO: false
+
+on:
+  push:
+    branches:
+      - 'main'
+    tags:
+      - '!*' # Do not execute on tags
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  rubocop:
+    name: RuboCop
+    strategy:
+      fail-fast: false
+      matrix:
+        experimental: [false]
+        rubygems:
+          - latest
+        bundler:
+          - latest
+        gemfile:
+          - style
+        ruby:
+          - "ruby"
+    runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
+    env: # $BUNDLE_GEMFILE must be set on the job level, so it is set for all steps
+      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby & Bundle
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          rubygems: ${{ matrix.rubygems }}
+          bundler: ${{ matrix.bundler }}
+          bundler-cache: true
+      - name: Run RuboCop
+        run: bundle exec rake rubocop_gradual:dogfood

@@ -1,0 +1,4 @@
+# frozen_string_literal: true
+
+# Std Lib extractions
+gem "benchmark", "~> 0.4" # Removed from Std Lib in Ruby 3.5

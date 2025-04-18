@@ -1,5 +1,11 @@
 name: Code Style
 
+permissions:
+  contents: read
+
+env:
+  K_SOUP_COV_DO: false
+
 on:
   push:
     branches:
@@ -17,12 +23,17 @@ jobs:
       fail-fast: false
       matrix:
         experimental: [false]
+        rubygems:
+          - latest
+        bundler:
+          - latest
         gemfile:
           - style
         ruby:
-          - "3.2"
+          - "ruby"
     runs-on: ubuntu-latest
-    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
+    continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
+    env: # $BUNDLE_GEMFILE must be set on the job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
     steps:
       - name: Checkout
@@ -31,6 +42,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
+          rubygems: ${{ matrix.rubygems }}
+          bundler: ${{ matrix.bundler }}
           bundler-cache: true
       - name: Run RuboCop
         run: bundle exec rake rubocop_gradual

@@ -1,0 +1,20 @@
+# We want "Exclude" and "Include" directives from different
+#   config files to get merged, not overwritten
+inherit_mode:
+  merge:
+    - Exclude
+    - Include
+
+require:
+  - rubocop-lts-rspec
+  - rubocop-rspec-extra
+  - rubocop-env
+  - rubocop-rspec
+
+inherit_gem:
+  rubocop-env: config/default.yml
+  rubocop-rspec-extra: config/default.yml
+
+inherit_from:
+  - ./base.yml
+  - ./internal/ruby-3.4.yml

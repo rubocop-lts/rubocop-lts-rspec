@@ -1,4 +1,4 @@
-# We want Exclude and Include directives from different
+# We want "Exclude" and "Include" directives from different
 #   config files to get merged, not overwritten
 inherit_mode:
   merge:
@@ -6,23 +6,14 @@ inherit_mode:
     - Include
 
 require:
-  - standard-rubocop-lts
-  - standard
-  - standard-performance
-  - standard-custom
-  - rubocop-performance
+  - rubocop-lts-rspec
+  - rubocop-rspec-extra
+  - rubocop-env
+  - rubocop-rspec
 
-# Load basic rules for this version of Ruby from standard.
-# Rules are overridden in a LIFO stack.
-# If rubocop-performance is listed first, and standard-performance after it,
-#   then rubocop-performance's rules will take precedence.
-# This is the opposite of what you might expect.
-# Below: standard's rules override rubocop-performance's (mostly disabling rules)
 inherit_gem:
-  standard: config/ruby-1.9.yml
-  standard-performance: config/ruby-1.9.yml
-  standard-custom: config/base.yml
-  rubocop-performance: config/default.yml
+  rubocop-env: config/default.yml
+  rubocop-rspec-extra: config/default.yml
 
 inherit_from:
   - ./base.yml
