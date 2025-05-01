@@ -60,7 +60,7 @@ rescue LoadError
   end
 end
 
-desc "alias test task to spec"
+desc "run spec task with test task"
 task test: :spec
 
 # Setup Reek
