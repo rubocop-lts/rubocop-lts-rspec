@@ -83,9 +83,9 @@ Gem::Specification.new do |spec|
   spec.add_dependency("version_gem", ">= 1.1.8", "< 3") # Ruby >= 2.2.0
 
   # Linting
-  spec.add_dependency("rubocop", "~> 1.72")                             # Ruby >= 2.7.0
+  spec.add_dependency("rubocop", "~> 1.72", ">= 1.72.1")                # Ruby >= 2.7.0
   spec.add_dependency("rubocop-env", "~> 0.1", ">= 0.1.0")              # Ruby >= 2.5.0
-  spec.add_dependency("rubocop-rspec", "~> 3.3", ">= 3.3.0")            # Ruby >= 2.7.0
+  spec.add_dependency("rubocop-rspec", "~> 3.6", ">= 3.6.0")            # Ruby >= 2.7.0
   spec.add_dependency("rubocop-rspec-extra", "~> 0.2", ">= 0.2.0")      # Ruby >= 2.7.0
   spec.add_dependency("standard", ">= 1.38", "< 2")                     # Ruby >= 3.0.0
   spec.add_dependency("standard-rspec", "~> 0.3", ">= 0.3.1")           # Ruby >= 2.7.0
@@ -109,11 +109,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("yard-junk", "~> 0.0", ">= 0.0.10")             # Ruby >= 2.7.0
 
   # Linting
-  # NOTE: The gems below, are packaged
-  #         for distribution with single-line configuration by the rubocop-lts meta gem!
-  #       This gem, rubocop-lts-rspec, is not depended on by rubocop-lts,
-  #         but it has RSpec config integration with this gem.
-  #       You just need to depend on this gem discretely in order to use them.
+  # This gem, rubocop-lts-rspec, is not depended on by rubocop-lts,
+  #   but it has RSpec config integration with this gem.
+  # You just need to depend on this gem discretely in order to use them.
   # We run rubocop on the latest version of Ruby,
   #   but in support of the oldest supported version of Ruby
   spec.add_development_dependency("rubocop-lts", "~> 24.0", ">= 24.0.2") # Linting for Ruby >= 3.2
@@ -124,5 +122,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rspec", "~> 3.13") # Ruby >= 0
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.6") # Ruby >= 1.8.7
   spec.add_development_dependency("rspec_junit_formatter", "~> 0.6")              # Ruby >= 2.3.0
-  spec.add_development_dependency("rspec-stubbed_env", "~> 1.0", ">= 1.0.1")      # Ruby >= 1.8.7
+  spec.add_development_dependency("rspec-stubbed_env", "~> 1.0", ">= 1.0.2")      # Ruby >= 1.8.7
 end
