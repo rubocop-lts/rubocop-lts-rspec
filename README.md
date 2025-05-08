@@ -148,7 +148,7 @@ A typical release cycle for a gem in the `rubocop-lts` family is roughly every s
 though eventually analysis support for an old version of Ruby will become impossible,
 because of limitations of RuboCop.
 When that happens releases of the `rubocop-lts` gem for that version of Ruby will (mostly) cease.
-For now though, in Q2 2025, RuboCop can still be used with code targeting Ruby v1.8.7, and newer.
+For now though, in Q2 2025, RuboCop, via RuboCop-LTS, can still be used with code targeting Ruby v1.8.7, and newer.
 
 ## Info you can shake a stick at
 
