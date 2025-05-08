@@ -1,15 +1,10 @@
 # frozen_string_literal: true
 
-# Get the GEMFILE_VERSION without *require* "my_gem/version", for code coverage accuracy
-# See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-2630782358
-# Kernel.load because load is overloaded in RubyGems during gemspec evaluation
-Kernel.load("lib/rubocop/lts/rspec/version.rb")
-gem_version = Rubocop::Lts::Rspec::Version::VERSION
-Rubocop::Lts::Rspec::Version.send(:remove_const, :VERSION)
-
 Gem::Specification.new do |spec|
   spec.name = "rubocop-lts-rspec"
-  spec.version = gem_version
+  # Loading version into an anonymous module allows version.rb to get code coverage from SimpleCov!
+  # See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-2630782358
+  spec.version = Module.new.tap { |mod| Kernel.load("lib/rubocop/lts/rspec/version.rb", mod) }::Rubocop::Lts::Rspec::Version::VERSION
   spec.authors = ["Peter Boling"]
   spec.email = ["peter.boling@gmail.com"]
 
