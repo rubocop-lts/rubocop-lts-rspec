@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
     end
   end
 
-  spec.summary = "RSpec Ruby Configs for Finely Aged Rubies"
+  spec.summary = "RSpec Ruby Configs tuned for compatibility with specified version of Ruby"
   spec.description = <<~DESC
     Enables Ruby projects that test with RSpec to more confidently support even the most finely-aged Rubies.
     Part of the rubocop-lts family.
