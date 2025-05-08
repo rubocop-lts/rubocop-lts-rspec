@@ -218,25 +218,25 @@ whatever version of Ruby your project happens to be on!
 
 ### 🔒 Secure Installation
 
-`standard-rubocop-lts` is cryptographically signed, and has verifiable [SHA-256 and SHA-512][💎SHA_checksums] checksums by
+`rubocop-lts-rspec` is cryptographically signed, and has verifiable [SHA-256 and SHA-512][💎SHA_checksums] checksums by
 [stone_checksums][💎stone_checksums]. Be sure the gem you install hasn’t been tampered with
 by following the instructions below.
 
 Add my public key (if you haven’t already, expires 2045-04-29) as a trusted certificate:
 
 ```shell
-gem cert --add <(curl -Ls https://raw.github.com/rubocop-lts/standard-rubocop-lts/main/certs/pboling.pem)
+gem cert --add <(curl -Ls https://raw.github.com/rubocop-lts/rubocop-lts-rspec/main/certs/pboling.pem)
 ```
 
 You only need to do that once.  Then proceed to install with:
 
 ```shell
-gem install standard-rubocop-lts -P MediumSecurity
+gem install rubocop-lts-rspec -P MediumSecurity
 ```
 
 The `MediumSecurity` trust profile will verify signed gems, but allow the installation of unsigned dependencies.
 
-This is necessary because not all of `standard-rubocop-lts`’s dependencies are signed, so we cannot use `HighSecurity`.
+This is necessary because not all of `rubocop-lts-rspec`’s dependencies are signed, so we cannot use `HighSecurity`.
 
 If you want to up your security game full-time:
 
@@ -460,7 +460,7 @@ See [docs/images/logo/README.txt][project-logos]
 ### © Copyright
 
 <p>
-  Copyright (c) 2023 - 2025 Peter H. Boling,
+  Copyright (c) 2025 Peter H. Boling,
   <a href="https://railsbling.com">
     RailsBling.com
     <picture>
@@ -558,7 +558,7 @@ or one of the others at the head of this README.
 [🚎8-df-wfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/dogfood.yml/badge.svg
 [🚎11-c-wf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/current.yml
 [🚎11-c-wfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/current.yml/badge.svg
-[⛳liberapay-img]: https://img.shields.io/liberapay/patrons/pboling.svg?logo=liberapay
+[⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay
 [⛳liberapay]: https://liberapay.com/pboling/donate
 [🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
 [🖇sponsor]: https://github.com/sponsors/pboling
