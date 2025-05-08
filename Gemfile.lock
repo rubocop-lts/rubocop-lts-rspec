@@ -20,7 +20,7 @@ PATH
       rubocop-rspec-extra (~> 0.2, >= 0.2.0)
       standard (>= 1.38, < 2)
       standard-rspec (~> 0.3, >= 0.3.1)
-      version_gem (>= 1.1.7, < 3)
+      version_gem (>= 1.1.8, < 3)
 
 GEM
   remote: https://rubygems.org/

@@ -80,7 +80,7 @@ Gem::Specification.new do |spec|
   spec.executables = []
 
   # Utilities
-  spec.add_dependency("version_gem", ">= 1.1.7", "< 3") # Ruby >= 2.2.0
+  spec.add_dependency("version_gem", ">= 1.1.8", "< 3") # Ruby >= 2.2.0
 
   # Linting
   spec.add_dependency("rubocop", "~> 1.72")                             # Ruby >= 2.7.0
