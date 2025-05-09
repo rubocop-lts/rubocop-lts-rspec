@@ -339,14 +339,21 @@ require:
 inherit_gem:
   rubocop-env: config/default.yml
   rubocop-rspec-extra: config/default.yml
+
+RSpec/Focus: # run ALL tests on CI
+  Enabled: true
+  Exclude: []
+
+Lint/Debugger: # don't leave binding.pry
+  Enabled: true
+  Exclude: [ ]
 ```
 
 </details>
 
 ### What about TargetRubyVersion?
 
-In addition to using this gem, `rubocop-lts-rspec`, use the sibling-gem `rubocop-lts`.
-Then you don't need to worry about it, as it will be configured for you by `rubocop-lts`.
+It will be set up for you, when you follow any of the above setup instructions.
 
 ### 🚀 Release Instructions
 
