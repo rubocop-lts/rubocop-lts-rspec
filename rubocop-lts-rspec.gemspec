@@ -101,7 +101,6 @@ Gem::Specification.new do |spec|
 
   # Documentation
   spec.add_development_dependency("yard", "~> 0.9", ">= 0.9.37")                  # Ruby >= 0
-  spec.add_development_dependency("yard-junk", "~> 0.0", ">= 0.0.10")             # Ruby >= 2.7.0
 
   # Linting
   # This gem, rubocop-lts-rspec, is not depended on by rubocop-lts,
