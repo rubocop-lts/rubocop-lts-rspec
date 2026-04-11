@@ -8,9 +8,6 @@ Metrics:
 # Ruby specific customizations
 Layout/LineLength:
   Max: 120
-  # TODO: Remove once we upgrade to standard-rubocop-lts v2
-  Exclude:
-    - bin/bundle
 
 Style/HashSyntax:
   EnforcedStyle: ruby19_no_mixed_keys
@@ -18,37 +15,3 @@ Style/HashSyntax:
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
   Enabled: true
-
-# TODO: Remove once we upgrade to standard-rubocop-lts v2
-# The standard generated bin/bundle script from `bundle binstubs --all`
-#   does not comply with our style guide, but it is frequently regenerated
-#   so rather than repeatedly churning the file, we let it be.
-ThreadSafety/ClassInstanceVariable:
-  Enabled: true
-  Exclude:
-    - bin/bundle
-
-Style/InvertibleUnlessCondition:
-  Enabled: true
-  Exclude:
-    - bin/bundle
-
-Style/MethodCallWithArgsParentheses:
-  Enabled: true
-  Exclude:
-    - bin/bundle
-
-Metrics/CyclomaticComplexity:
-  Enabled: true
-  Exclude:
-    - bin/bundle
-
-Metrics/MethodLength:
-  Enabled: true
-  Exclude:
-    - bin/bundle
-
-Metrics/PerceivedComplexity:
-  Enabled: true
-  Exclude:
-    - bin/bundle
