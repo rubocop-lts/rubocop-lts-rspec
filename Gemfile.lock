@@ -4,6 +4,7 @@ PATH
     rubocop-lts-rspec (1.0.0)
       rubocop (~> 1.72, >= 1.72.1)
       rubocop-env (~> 0.1, >= 0.1.0)
+      rubocop-factory_bot (~> 2.27, >= 2.27.1)
       rubocop-rspec (~> 3.6, >= 3.6.0)
       rubocop-rspec-extra (~> 0.2, >= 0.2.0)
       standard (>= 1.38, < 2)

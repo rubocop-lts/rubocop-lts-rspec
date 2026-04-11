@@ -1,3 +1,7 @@
+# Shared RSpec integrations for the rubocop-lts family.
+require:
+  - rubocop-factory_bot
+
 # Configurations of specific RuboCop rules go here
 RSpec:
   Language:

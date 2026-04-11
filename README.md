@@ -332,6 +332,7 @@ inherit_mode:
 
 require:
   - rubocop-lts-rspec
+  - rubocop-factory_bot
   - rubocop-rspec-extra
   - rubocop-env
   - rubocop-rspec

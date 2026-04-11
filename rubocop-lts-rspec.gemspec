@@ -80,6 +80,7 @@ Gem::Specification.new do |spec|
   # Linting
   spec.add_dependency("rubocop", "~> 1.72", ">= 1.72.1")                # Ruby >= 2.7.0
   spec.add_dependency("rubocop-env", "~> 0.1", ">= 0.1.0")              # Ruby >= 2.5.0
+  spec.add_dependency("rubocop-factory_bot", "~> 2.27", ">= 2.27.1")    # Ruby >= 2.7.0
   spec.add_dependency("rubocop-rspec", "~> 3.6", ">= 3.6.0")            # Ruby >= 2.7.0
   spec.add_dependency("rubocop-rspec-extra", "~> 0.2", ">= 0.2.0")      # Ruby >= 2.7.0
   spec.add_dependency("standard", ">= 1.38", "< 2")                     # Ruby >= 3.0.0
@@ -103,9 +104,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("yard", "~> 0.9", ">= 0.9.37")                  # Ruby >= 0
 
   # Linting
-  # This gem, rubocop-lts-rspec, is not depended on by rubocop-lts,
-  #   but it has RSpec config integration with this gem.
-  # You just need to depend on this gem discretely in order to use them.
+  # The broader rubocop-lts family delegates its `*_rspec.yml` wrappers here.
+  # Users who opt into those RSpec configs should add this companion gem explicitly.
   # We run rubocop on the latest version of Ruby,
   #   but in support of the oldest supported version of Ruby
   spec.add_development_dependency("rubocop-lts", "~> 24.0", ">= 24.0.2") # Linting for Ruby >= 3.2
