@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 ### Removed
+- rubocop-shopify as a transitive dependency (via rubocop-lts)
 
 ## [1.0.0] 2023-04-16
 - Initial release
