@@ -94,6 +94,7 @@ Gem::Specification.new do |spec|
 
   # Releases
   spec.add_development_dependency("rake", "~> 13.2", ">= 13.2.1")                 # Ruby >= 2.3.0
+  spec.add_development_dependency("kettle-soup-cover", "~> 1.1", ">= 1.1.3")      # Ruby >= 2.7.0
   spec.add_development_dependency("stone_checksums", "~> 1.0", ">= 1.0.3")        # Ruby >= 2.2.0
 
   # Documentation
