@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 ### Changed
+- Load RSpec-family RuboCop extensions through RuboCop's plugin API.
 ### Fixed
 ### Removed
 - rubocop-shopify as a transitive dependency (via rubocop-lts)

@@ -5,11 +5,13 @@ inherit_mode:
     - Exclude
     - Include
 
+plugins:
+  - rubocop-rspec-extra
+  - rubocop-rspec
+
 require:
   - rubocop-lts-rspec
-  - rubocop-rspec-extra
   - rubocop-env
-  - rubocop-rspec
 
 inherit_gem:
   rubocop-env: config/default.yml

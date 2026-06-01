@@ -1,5 +1,5 @@
 # Shared RSpec integrations for the rubocop-lts family.
-require:
+plugins:
   - rubocop-factory_bot
 
 # Configurations of specific RuboCop rules go here
