@@ -7,7 +7,7 @@ module Rubocop
       module Version
         # Bump VERSION manually for each new release!
         # See: CONTRIBUTING.md
-        VERSION = "1.0.2"
+        VERSION = "1.0.3"
       end
     end
   end
