@@ -13,7 +13,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.3] 2026-06-01
 ### Added
 ### Changed
-- Updated dependency floors to the latest compatible releases.
+- Updated dependency floors:
+  - `rubocop` to `~> 1.84`, `>= 1.84.2`.
+  - `rubocop-factory_bot` to `~> 2.28`, `>= 2.28.0`.
+  - `rubocop-rspec` to `~> 3.9`, `>= 3.9.0`.
+  - `rubocop-rspec-extra` to `~> 0.3`, `>= 0.3.0`.
+  - `standard` to `~> 1.54`, `>= 1.54.0`.
+  - `standard-rspec` to `~> 0.5`, `>= 0.5.0`.
+  - Release and test dependencies to their latest compatible floors.
 - Raised the minimum supported Ruby version to 3.2.
 ### Fixed
 ### Removed
