@@ -1,0 +1,10 @@
+module Rubocop
+  module Lts
+    module Rspec
+      module Version
+        VERSION: String
+      end
+      VERSION: String
+    end
+  end
+end

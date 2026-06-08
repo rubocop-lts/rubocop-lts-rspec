@@ -1,237 +1,108 @@
-<a href="https://rubocop-lts.gitlab.io/"><img alt="rubocop-lts Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/rubocop-lts/avatar-192px.svg" width="20%" align="right"/></a>
+<a href="https://github.com/pboling"><img alt="pboling Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/pboling/avatar-128px.svg" width="14%" align="right"/></a>
 
-# 🦾 Rubocop::Lts::RSpec [![Ruby Code Style](https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?style=for-the-badge&logo=ruby&logoColor=white)](https://github.com/rubocop-lts/rubocop-lts)
+# 🦾 Rubocop::Lts::Rspec
 
-[![Version][👽versioni]][👽version]
-[![License: MIT][📄license-img]][📄license-ref]
-[![Downloads Rank][👽dl-ranki]][👽dl-rank]
-[![Open Source Helpers][👽oss-helpi]][👽oss-help]
-[![Depfu][🔑depfui♻️]][🔑depfu]
-[![CodeCov Test Coverage][🔑codecovi♻️]][🔑codecov]
-[![Coveralls Test Coverage][🔑coveralls-img]][🔑coveralls]
-[![CodeClimate Test Coverage][🔑cc-covi♻️]][🔑cc-cov]
-[![Maintainability][🔑cc-mnti♻️]][🔑cc-mnt]
-[![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf]
-[![CI Current][🚎11-c-wfi]][🚎11-c-wf]
-[![CI Supported][🚎6-s-wfi]][🚎6-s-wf]
-[![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf]
-[![CI Style][🚎5-st-wfi]][🚎5-st-wf]
-[![CI Dog Food][🚎8-df-wfi]][🚎8-df-wf]
+[![Version][👽versioni]][👽version] [![GitHub tag (latest SemVer)][⛳️tag-img]][⛳️tag] [![License: MIT][📄license-img]][📄license] [![Downloads Rank][👽dl-ranki]][👽dl-rank] [![CodeCov Test Coverage][🏀codecovi]][🏀codecov] [![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls] [![QLTY Test Coverage][🏀qlty-covi]][🏀qlty-cov] [![QLTY Maintainability][🏀qlty-mnti]][🏀qlty-mnt] [![CI Heads][🚎3-hd-wfi]][🚎3-hd-wf] [![CI Runtime Dependencies @ HEAD][🚎12-crh-wfi]][🚎12-crh-wf] [![CI Current][🚎11-c-wfi]][🚎11-c-wf] [![CI Truffle Ruby][🚎9-t-wfi]][🚎9-t-wf] [![CI JRuby][🚎10-j-wfi]][🚎10-j-wf] [![Deps Locked][🚎13-🔒️-wfi]][🚎13-🔒️-wf] [![Deps Unlocked][🚎14-🔓️-wfi]][🚎14-🔓️-wf] [![CI Test Coverage][🚎2-cov-wfi]][🚎2-cov-wf] [![CI Style][🚎5-st-wfi]][🚎5-st-wf] [![Apache SkyWalking Eyes License Compatibility Check][🚎15-🪪-wfi]][🚎15-🪪-wf]
+
+`if ci_badges.map(&:color).detect { it != "green"}` ☝️ [let me know][✉️discord-invite], as I may have missed the [discord notification][✉️discord-invite].
 
 ---
 
-[![Liberapay Patrons][⛳liberapay-img]][⛳liberapay]
-[![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor]
-[![Buy me a coffee][🖇buyme-small-img]][🖇buyme]
-[![Donate on Polar][🖇polar-img]][🖇polar]
-[![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi]
-[![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
+`if ci_badges.map(&:color).all? { it == "green"}` 👇️ send money so I can do more of this. FLOSS maintenance is now my full-time job.
 
-Extended [RuboCop::Lts][rlts] config shims for the RSpec-related Cop rules,
-back to Ruby version 1.8. Part of the `rubocop-lts` [gem family](#-a-gem-family).
-
-Use the rules standard gives you, and then add more,
-to increase your code's compatibility across multiple versions of Ruby.
-
-Only reach as far back as you need to go!
-
-[standardrb]: https://github.com/standardrb/standard
-
----
-
-The RuboCop LTS family of gems is the distillation of more than 20 years
-of my own Ruby expertise and source code diving,
-built on the shoulders of the expertise of many others — `rubocop`, `standard`,
-`rubocop-gradual` and others are runtime dependencies — not reinventing any wheels here);
-organizing that expertise into per-Ruby-version sets of configurations.
-Yes, I typed those emdashes, and wrote this entire README myself without AI —
-`ctrl`-`shift`-`u`-`2014`.
-
-Although the situation has improved somewhat,
-it remains [_unsafe_ to upgrade RuboCop, or Standard][Why-Build-This],
-in a project that supports EOL Rubies.
-
-I hope it helps others avoid some of the challenges I've had with library maintenance,
-and supporting decade-old mission-critical applications.
-
-Avoid bike-shedding, use [`rubocop-lts`][rlts] in every project, and
-let it manage your linting complexity!
-
-If the [`rubocop-lts`][rlts] stack of libraries has helped you, or your organization,
-please support my efforts by making a donation, or becoming a sponsor.
-
-[Why-Build-This]: https://rubocop-lts.gitlab.io/about/#why-build-this-
-
-### 👪 A Gem Family
-
-The `rubocop-lts` family of gems has a version supporting any version of Ruby you need.
-They can be used as development dependencies for libraries or applications.
-
-Only two of them sit at the top level, and this gem is one of them.
-
-| Gem Name                        | Version                             | Downloads                                                            | Activity                            |
-|---------------------------------|-------------------------------------|----------------------------------------------------------------------|-------------------------------------|
-| [`rubocop-lts`][⛳️lts-gh]       | [![Gem Version][⛳️lts-vi]][⛳️lts-g] | [![Total DL][🖇️lts-dti]][⛳️lts-g] [![DL Rank][🏘️lts-rti]][⛳️lts-g] | [![Current][🚎lts-cwfi]][🚎lts-cwf] | [![Open Issues][📗lts-ioi]][📗lts-io] [![Closed Issues][🚀lts-ici]][🚀lts-ic] [![Open PRs][💄lts-poi]][💄lts-po] [![Closed PRs][👽lts-pci]][👽lts-pc] |
-| [`rubocop-lts-rspec`][⛳️ini-gh] | [![Gem Version][⛳️ini-vi]][⛳️ini-g] | [![Total DL][🖇️ini-dti]][⛳️ini-g] [![DL Rank][🏘️ini-rti]][⛳️ini-g] | [![Current][🚎ini-cwfi]][🚎ini-cwf] | [![Open Issues][📗ini-ioi]][📗ini-io] [![Closed Issues][🚀ini-ici]][🚀ini-ic] [![Open PRs][💄ini-poi]][💄ini-po] [![Closed PRs][👽ini-pci]][👽ini-pc] |
+[![OpenCollective Backers][🖇osc-backers-i]][🖇osc-backers] [![OpenCollective Sponsors][🖇osc-sponsors-i]][🖇osc-sponsors] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Donate on PayPal][🖇paypal-img]][🖇paypal] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate on Polar][🖇polar-img]][🖇polar] [![Donate at ko-fi.com][🖇kofi-img]][🖇kofi]
 
 <details>
-    <summary>Nested Dependencies</summary>
+ <summary>👣 How will this project approach the September 2025 hostile takeover of RubyGems? 🚑️</summary>
 
-- [`standard-rubocop-lts`][stdrlts]
-- [`rubocop-ruby1_8`][rr18]
-- [`rubocop-ruby1_9`][rr19]
-- [`rubocop-ruby2_0`][rr20]
-- [`rubocop-ruby2_1`][rr21]
-- [`rubocop-ruby2_2`][rr22]
-- [`rubocop-ruby2_3`][rr23]
-- [`rubocop-ruby2_4`][rr24]
-- [`rubocop-ruby2_5`][rr25]
-- [`rubocop-ruby2_6`][rr26]
-- [`rubocop-ruby2_7`][rr27]
-- [`rubocop-ruby3_0`][rr30]
-- [`rubocop-ruby3_1`][rr31]
-- [`rubocop-ruby3_2`][rr32]
-- [`rubocop-ruby3_3`][rr33]
-- [`rubocop-ruby3_4`][rr34]
+I've summarized my thoughts in [this blog post](https://dev.to/galtzo/hostile-takeover-of-rubygems-my-thoughts-5hlo).
 
 </details>
 
-### Love linting?
-
-Add a badge to your project's `README.md`!
-
-[![Ruby Code Style](https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?style=for-the-badge&logo=ruby&logoColor=white)](https://github.com/rubocop-lts/rubocop-lts)
-
-```md
-[![Ruby Code Style](https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?style=for-the-badge&logo=ruby&logoColor=white)](https://github.com/rubocop-lts/rubocop-lts)
-```
-
-[![Ruby Code Style](https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?style=plastic&logo=ruby&logoColor=white)](https://github.com/rubocop-lts/rubocop-lts)
-
-```md
-[![Ruby Code Style](https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?style=plastic&logo=ruby&logoColor=white)](https://github.com/rubocop-lts/rubocop-lts)
-```
-
-[⛳️lts-vi]: http://img.shields.io/gem/v/rubocop-lts.svg
-[🖇️lts-dti]: https://img.shields.io/gem/dt/rubocop-lts.svg
-[🏘️lts-rti]: https://img.shields.io/gem/rt/rubocop-lts.svg
-[🚎lts-cwf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/current.yml
-[🚎lts-cwfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/current.yml/badge.svg
-[📗lts-io]: https://github.com/rubocop-lts/rubocop-lts/issues
-[📗lts-ioi]: https://img.shields.io/github/issues-raw/rubocop-lts/rubocop-lts
-[🚀lts-ic]: https://github.com/rubocop-lts/rubocop-lts/issues?q=is%3Aissue+is%3Aclosed
-[🚀lts-ici]: https://img.shields.io/github/issues-closed-raw/rubocop-lts/rubocop-lts
-[💄lts-po]: https://github.com/rubocop-lts/rubocop-lts/pulls
-[💄lts-poi]: https://img.shields.io/github/issues-pr/rubocop-lts/rubocop-lts
-[👽lts-pc]: https://github.com/rubocop-lts/rubocop-lts/pulls?q=is%3Apr+is%3Aclosed
-[👽lts-pci]: https://img.shields.io/github/issues-pr-closed/rubocop-lts/rubocop-lts
-[⛳️lts-g]: https://rubygems.org/gems/rubocop-lts
-[⛳️lts-gh]: https://github.com/rubocop-lts/rubocop-lts
-
-[⛳️ini-vi]: http://img.shields.io/gem/v/rubocop-lts-rspec.svg
-[🖇️ini-dti]: https://img.shields.io/gem/dt/rubocop-lts-rspec.svg
-[🏘️ini-rti]: https://img.shields.io/gem/rt/rubocop-lts-rspec.svg
-[🚎ini-cwf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/current.yml
-[🚎ini-cwfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/current.yml/badge.svg
-[📗ini-io]: https://github.com/rubocop-lts/rubocop-lts-rspec/issues
-[📗ini-ioi]: https://img.shields.io/github/issues-raw/rubocop-lts/rubocop-lts-rspec
-[🚀ini-ic]: https://github.com/rubocop-lts/rubocop-lts-rspec/issues?q=is%3Aissue+is%3Aclosed
-[🚀ini-ici]: https://img.shields.io/github/issues-closed-raw/rubocop-lts/rubocop-lts-rspec
-[💄ini-po]: https://github.com/rubocop-lts/rubocop-lts-rspec/pulls
-[💄ini-poi]: https://img.shields.io/github/issues-pr/rubocop-lts/rubocop-lts-rspec
-[👽ini-pc]: https://github.com/rubocop-lts/rubocop-lts-rspec/pulls?q=is%3Apr+is%3Aclosed
-[👽ini-pci]: https://img.shields.io/github/issues-pr-closed/rubocop-lts/rubocop-lts-rspec
-[⛳️ini-g]: https://rubygems.org/gems/rubocop-lts-rspec
-[⛳️ini-gh]: https://github.com/rubocop-lts/rubocop-lts-rspec
-
-[rlts]: https://rubocop-lts.gitlab.io/#installation-
-[rlts-rspec]: https://gitlab.com/rubocop-lts/rubocop-lts-rspec
-[stdrlts]: https://gitlab.com/rubocop-lts/standard-rubocop-lts
-[rr18]: https://gitlab.com/rubocop-lts/rubocop-ruby1_8
-[rr19]: https://gitlab.com/rubocop-lts/rubocop-ruby1_9
-[rr20]: https://gitlab.com/rubocop-lts/rubocop-ruby2_0
-[rr21]: https://gitlab.com/rubocop-lts/rubocop-ruby2_1
-[rr22]: https://gitlab.com/rubocop-lts/rubocop-ruby2_2
-[rr23]: https://gitlab.com/rubocop-lts/rubocop-ruby2_3
-[rr24]: https://gitlab.com/rubocop-lts/rubocop-ruby2_4
-[rr25]: https://gitlab.com/rubocop-lts/rubocop-ruby2_5
-[rr26]: https://gitlab.com/rubocop-lts/rubocop-ruby2_6
-[rr27]: https://gitlab.com/rubocop-lts/rubocop-ruby2_7
-[rr30]: https://gitlab.com/rubocop-lts/rubocop-ruby3_0
-[rr31]: https://gitlab.com/rubocop-lts/rubocop-ruby3_1
-[rr32]: https://gitlab.com/rubocop-lts/rubocop-ruby3_2
-[rr33]: https://gitlab.com/rubocop-lts/rubocop-ruby3_3
-[rr34]: https://gitlab.com/rubocop-lts/rubocop-ruby3_4
-
-## 🗿 Stable
-
-All releases of this gem are stable releases.
-We do not release new versions for every release of `rubocop`,
-as this gem is part of `rubocop-lts`, which is tied to [standard (Standard Ruby)][standardrb].
-Eventually analysis support for an old version of Ruby will no longer be sustainable.
-When that happens releases of the `rubocop-lts` gem for that version of Ruby will (mostly) cease.
-For now though, in Q2 2025, RuboCop, via RuboCop-LTS, can still be used with code targeting Ruby v1.8.7, and newer.
+## 🌻 Synopsis <a href="https://discord.gg/3qme4XHNKN"><img alt="Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/galtzo-floss/avatar-128px.svg" width="8%" align="right"/></a> <a href="https://ruby-toolbox.com"><img alt="ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5" src="https://logos.galtzo.com/assets/images/ruby-lang/avatar-128px.svg" width="8%" align="right"/></a>
 
 ## 💡 Info you can shake a stick at
 
-| Tokens to Remember       | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace]                                                                                                                                                                                                                                                                                                                                                                          |
-|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Works with MRI Ruby 3.2+ | [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎6-s-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎6-s-wf] [![Ruby 3.4 Compat][💎ruby-c-i]][🚎11-c-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]                                                                                                                                                                                                                                                                                  |
-| Source                   | [![Source on GitLab.com][📜src-gl-img]][📜src-gl] [![Source on Github.com][📜src-gh-img]][📜src-gh] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc]                                                                                                                                                                                                                                                                                                             |
-| Documentation            | [![Current release on RubyDoc.info][📜docs-cr-rd-img]][🚎yard-current] [![HEAD on RubyDoc.info][📜docs-head-rd-img]][🚎yard-head] [![BDFL Blog][🚂bdfl-blog-img]][🚂bdfl-blog] [![Wiki][📜wiki-img]][📜wiki]                                                                                                                                                                                                                                                        |
-| Compliance               | [![License: MIT][📄license-img]][📄license-ref] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![Enforced Code Style][💎rlts-img]][💎rlts] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct] [![SemVer 2.0.0][📌semver-img]][📌semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog] [![Gitmoji Commits][📌gitmoji-img]][📌gitmoji]                |
-| Expert 1:1 Support       | [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] `or` [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]                                                                                                                                                                                                                                                                                    |
-| Enterprise Support       | [![Get help from me on Tidelift][🏙️entsup-tidelift-img]][🏙️entsup-tidelift]<br/>💡Subscribe for support guarantees covering _all_ FLOSS dependencies!<br/>💡Tidelift is part of [Sonar][🏙️entsup-tidelift-sonar]!<br/>💡Tidelift pays maintainers to maintain the software you depend on!<br/>📊`@`Pointy Haired Boss: An [enterprise support][🏙️entsup-tidelift] subscription is "[never gonna let you down][🧮kloc]", and *supports* open source maintainers! |
-| Comrade BDFL 🎖️         | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![Follow Me on Bluesky][💖🦋bluesky-img]][💖🦋bluesky] [![Contact BDFL][🚂bdfl-contact-img]][🚂bdfl-contact] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto]                                                                                                                                                              |
-| `...` 💖                 | [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [![More About Me][💖💁🏼‍♂️aboutme-img]][💖💁🏼‍♂️aboutme] [🧊][💖🧊berg] [🐙][💖🐙hub] [🛖][💖🛖hut] [🧪][💖🧪lab]                                                                                                                                                                    |
+| Tokens to Remember | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace] |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Works with JRuby | [![JRuby current Compat][💎jruby-c-i]][🚎10-j-wf] [![JRuby HEAD Compat][💎jruby-headi]][🚎3-hd-wf]|
+| Works with Truffle Ruby | [![Truffle Ruby 24.2 Compat][💎truby-24.2i]][🚎truby-24.2-wf] [![Truffle Ruby 25.0 Compat][💎truby-25.0i]][🚎truby-25.0-wf] [![Truffle Ruby current Compat][💎truby-c-i]][🚎9-t-wf]|
+| Works with MRI Ruby 4 | [![Ruby 4.0 Compat][💎ruby-4.0i]][🚎11-c-wf] [![Ruby current Compat][💎ruby-c-i]][🚎11-c-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]|
+| Works with MRI Ruby 3 | [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎ruby-3.2-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎ruby-3.3-wf] [![Ruby 3.4 Compat][💎ruby-3.4i]][🚎ruby-3.4-wf]|
+| Support & Community | [![Join Me on Daily.dev's RubyFriends][✉️ruby-friends-img]][✉️ruby-friends] [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite] [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor] |
+| Source | [![Source on GitLab.com][📜src-gl-img]][📜src-gl] [![Source on CodeBerg.org][📜src-cb-img]][📜src-cb] [![Source on Github.com][📜src-gh-img]][📜src-gh] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc] |
+| Documentation | [![Current release on RubyDoc.info][📜docs-cr-rd-img]][🚎yard-current] [![YARD on Galtzo.com][📜docs-head-rd-img]][🚎yard-head] [![Maintainer Blog][🚂maint-blog-img]][🚂maint-blog] [![GitLab Wiki][📜gl-wiki-img]][📜gl-wiki] [![GitHub Wiki][📜gh-wiki-img]][📜gh-wiki] |
+| Compliance | [![License: MIT][📄license-img]][📄license] [![Apache license compatibility: Category A][📄license-compat-img]][📄license-compat] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct] [![SemVer 2.0.0][📌semver-img]][📌semver] |
+| Style | [![Enforced Code Style Linter][💎rlts-img]][💎rlts] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog] [![Gitmoji Commits][📌gitmoji-img]][📌gitmoji] [![Compatibility appraised by: appraisal2][💎appraisal2-img]][💎appraisal2] |
+| Maintainer 🎖️ | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![Follow Me on Bluesky][💖🦋bluesky-img]][💖🦋bluesky] [![Contact Maintainer][🚂maint-contact-img]][🚂maint-contact] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto] |
+| `...` 💖 | [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [![More About Me][💖💁🏼‍♂️aboutme-img]][💖💁🏼‍♂️aboutme] [🧊][💖🧊berg] [🐙][💖🐙hub] [🛖][💖🛖hut] [🧪][💖🧪lab] |
+
+### Compatibility
+
+Compatible with MRI Ruby 3.2.0+, and concordant releases of JRuby, and TruffleRuby.
+CI workflows and Appraisals are generated for MRI Ruby 3.2.0+.
+This test floor is configured by `ruby.test_minimum` in `.kettle-jem.yml` and
+may be higher than the gem's runtime compatibility floor when legacy Rubies are
+not practical for the current toolchain.
+
+| 🚚 _Amazing_ test matrix was brought to you by | 🔎 appraisal2 🔎 and the color 💚 green 💚 |
+|------------------------------------------------|--------------------------------------------------------|
+| 👟 Check it out! | ✨ [github.com/appraisal-rb/appraisal2][💎appraisal2] ✨ |
+
+### Federated DVCS
+
+<details markdown="1">
+ <summary>Find this repo on federated forges (Coming soon!)</summary>
+
+| Federated [DVCS][💎d-in-dvcs] Repository | Status | Issues | PRs | Wiki | CI | Discussions |
+|-------------------------------------------------|-----------------------------------------------------------------------|---------------------------|--------------------------|---------------------------|--------------------------|------------------------------|
+| 🧪 [pboling/rubocop-lts-rspec on GitLab][📜src-gl] | The Truth | [💚][🤝gl-issues] | [💚][🤝gl-pulls] | [💚][📜gl-wiki] | 🐭 Tiny Matrix | ➖ |
+| 🧊 [pboling/rubocop-lts-rspec on CodeBerg][📜src-cb] | An Ethical Mirror ([Donate][🤝cb-donate]) | [💚][🤝cb-issues] | [💚][🤝cb-pulls] | ➖ | ⭕️ No Matrix | ➖ |
+| 🐙 [pboling/rubocop-lts-rspec on GitHub][📜src-gh] | Another Mirror | [💚][🤝gh-issues] | [💚][🤝gh-pulls] | [💚][📜gh-wiki] | 💯 Full Matrix | [💚][gh-discussions] |
+| 🎮️ [Discord Server][✉️discord-invite] | [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite] | [Let's][✉️discord-invite] | [talk][✉️discord-invite] | [about][✉️discord-invite] | [this][✉️discord-invite] | [library!][✉️discord-invite] |
+
+</details>
+
+[gh-discussions]: https://github.com/pboling/rubocop-lts-rspec/discussions
+
+### Enterprise Support [![Tidelift](https://tidelift.com/badges/package/rubygems/rubocop-lts-rspec)](https://tidelift.com/subscription/pkg/rubygems-rubocop-lts-rspec?utm_source=rubygems-rubocop-lts-rspec&utm_medium=referral&utm_campaign=readme)
+
+Available as part of the Tidelift Subscription.
+
+<details markdown="1">
+ <summary>Need enterprise-level guarantees?</summary>
+
+The maintainers of this and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source packages you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact packages you use.
+
+[![Get help from me on Tidelift][🏙️entsup-tidelift-img]][🏙️entsup-tidelift]
+
+- 💡Subscribe for support guarantees covering _all_ your FLOSS dependencies
+- 💡Tidelift is part of [Sonar][🏙️entsup-tidelift-sonar]
+- 💡Tidelift pays maintainers to maintain the software you depend on!<br/>📊`@`Pointy Haired Boss: An [enterprise support][🏙️entsup-tidelift] subscription is "[never gonna let you down][🧮kloc]", and *supports* open source maintainers
+
+Alternatively:
+
+- [![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite]
+- [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork]
+- [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]
+
+</details>
 
 ## ✨ Installation
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add rubocop-lts-rspec
+```console
+bundle add rubocop-lts-rspec
+```
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install rubocop-lts-rspec
-
-NOTE: You can use this gem standalone, but it is recommended to use together with [`rubocop-lts`][rlts].
-Starting with [`rubocop-lts`][rlts]'s Epoch v1 series (i.e. SemVer major versions 1_0XX) each config in [`rubocop-lts`][rlts]
-has an alternate rspec version that depends on this gem.
-If you want to use them, you must add the dependency on this gem to your gemfile/gemspec separately.
-It will enable your RSpec style rules to be integrated with your Ruby style rules,
-and for the entire suite of rules to target, with an explicit goal of compatibility,
-whatever version of Ruby your project happens to be on!
-
-### 🔒 Secure Installation
-
-`rubocop-lts-rspec` is cryptographically signed, and has verifiable [SHA-256 and SHA-512][💎SHA_checksums] checksums by
-[stone_checksums][💎stone_checksums]. Be sure the gem you install hasn’t been tampered with
-by following the instructions below.
-
-Add my public key (if you haven’t already, expires 2045-04-29) as a trusted certificate:
-
-```shell
-gem cert --add <(curl -Ls https://raw.github.com/rubocop-lts/rubocop-lts-rspec/main/certs/pboling.pem)
+```console
+gem install rubocop-lts-rspec
 ```
 
-You only need to do that once.  Then proceed to install with:
-
-```shell
-gem install rubocop-lts-rspec -P MediumSecurity
-```
-
-The `MediumSecurity` trust profile will verify signed gems, but allow the installation of unsigned dependencies.
-
-This is necessary because not all of `rubocop-lts-rspec`’s dependencies are signed, so we cannot use `HighSecurity`.
-
-If you want to up your security game full-time:
-
-```shell
-bundle config set --global trust-policy MediumSecurity
-```
-
-NOTE: Be prepared to track down certs for signed gems and add them the same way you added mine.
+## ⚙️ Configuration
 
 ## 🔧 Basic Usage
 
@@ -347,6 +218,63 @@ It will be set up for you, when you follow any of the above setup instructions.
 
 See [CONTRIBUTING.md][🤝contributing].
 
+## 🦷 FLOSS Funding
+
+While pboling tools are free software and will always be, the project would benefit immensely from some funding.
+Raising a monthly budget of... "dollars" would make the project more sustainable.
+
+We welcome both individual and corporate sponsors! We also offer a
+wide array of funding channels to account for your preferences.
+Currently, [Open Collective][🖇osc] is our preferred funding platform.
+
+**If you're working in a company that's making significant use of pboling tools we'd
+appreciate it if you suggest to your company to become a pboling sponsor.**
+
+You can support the development of pboling tools via
+[GitHub Sponsors][🖇sponsor],
+[Liberapay][⛳liberapay],
+[PayPal][🖇paypal],
+[Open Collective][🖇osc]
+and [Tidelift][🏙️entsup-tidelift].
+
+| 📍 NOTE |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| If doing a sponsorship in the form of donation is problematic for your company <br/> from an accounting standpoint, we'd recommend the use of Tidelift, <br/> where you can get a support-like subscription instead. |
+
+### Open Collective for Individuals
+
+Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/pboling#backer)]
+
+NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day, automatically.
+
+<!-- OPENCOLLECTIVE-INDIVIDUALS:START -->
+No backers yet. Be the first!
+<!-- OPENCOLLECTIVE-INDIVIDUALS:END -->
+
+### Open Collective for Organizations
+
+Become a sponsor and get your logo on our README on GitHub with a link to your site. [[Become a sponsor](https://opencollective.com/pboling#sponsor)]
+
+NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day, automatically.
+
+<!-- OPENCOLLECTIVE-ORGANIZATIONS:START -->
+No sponsors yet. Be the first!
+<!-- OPENCOLLECTIVE-ORGANIZATIONS:END -->
+
+[kettle-readme-backers]: https://github.com/pboling/rubocop-lts-rspec/blob/main/exe/kettle-readme-backers
+
+### Another way to support open-source
+
+I’m driven by a passion to foster a thriving open-source community – a space where people can tackle complex problems, no matter how small. Revitalizing libraries that have fallen into disrepair, and building new libraries focused on solving real-world challenges, are my passions. I was recently affected by layoffs, and the tech jobs market is unwelcoming. I’m reaching out here because your support would significantly aid my efforts to provide for my family, and my farm (11 🐔 chickens, 2 🐶 dogs, 3 🐰 rabbits, 8 🐈‍ cats).
+
+If you work at a company that uses my work, please encourage them to support me as a corporate sponsor. My work on gems you use might show up in `bundle fund`.
+
+I’m developing a new library, [floss_funding][🖇floss-funding-gem], designed to empower open-source developers like myself to get paid for the work we do, in a sustainable way. Please give it a look.
+
+**[Floss-Funding.dev][🖇floss-funding.dev]: 👉️ No network calls. 👉️ No tracking. 👉️ No oversight. 👉️ Minimal crypto hashing. 💡 Easily disabled nags**
+
+[![OpenCollective Backers][🖇osc-backers-i]][🖇osc-backers] [![OpenCollective Sponsors][🖇osc-sponsors-i]][🖇osc-sponsors] [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor] [![Liberapay Goal Progress][⛳liberapay-img]][⛳liberapay] [![Donate on PayPal][🖇paypal-img]][🖇paypal] [![Buy me a coffee][🖇buyme-small-img]][🖇buyme] [![Donate on Polar][🖇polar-img]][🖇polar] [![Donate to my FLOSS efforts at ko-fi.com][🖇kofi-img]][🖇kofi] [![Donate to my FLOSS efforts using Patreon][🖇patreon-img]][🖇patreon]
+
 ## 🔐 Security
 
 See [SECURITY.md][🔐security].
@@ -354,21 +282,34 @@ See [SECURITY.md][🔐security].
 ## 🤝 Contributing
 
 If you need some ideas of where to help, you could work on adding more code coverage,
-or if it is already 💯 (see [below](#code-coverage)) then check [issues][🤝issues], or [PRs][🤝pulls],
+or if it is already 💯 (see [below](#code-coverage)) check [issues][🤝gh-issues] or [PRs][🤝gh-pulls],
 or use the gem and think about how it could be better.
 
 We [![Keep A Changelog][📗keep-changelog-img]][📗keep-changelog] so if you make changes, remember to update it.
 
 See [CONTRIBUTING.md][🤝contributing] for more detailed instructions.
 
+### 🚀 Release Instructions
+
+See [CONTRIBUTING.md][🤝contributing].
+
 ### Code Coverage
 
-[![Coverage Graph][🔑codecov-g♻️]][🔑codecov]
+<details markdown="1">
+<summary>Coverage service badges</summary>
+
+[![Coverage Graph][🏀codecov-g]][🏀codecov]
+
+[![Coveralls Test Coverage][🏀coveralls-img]][🏀coveralls]
+
+[![QLTY Test Coverage][🏀qlty-covi]][🏀qlty-cov]
+
+</details>
 
 ### 🪇 Code of Conduct
 
-Everyone interacting in this project's codebases, issue trackers,
-chat rooms and mailing lists is expected to follow the [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct].
+Everyone interacting with this project's codebases, issue trackers,
+chat rooms and mailing lists agrees to follow the [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct].
 
 ## 🌈 Contributors
 
@@ -376,46 +317,25 @@ chat rooms and mailing lists is expected to follow the [![Contributor Covenant 2
 
 Made with [contributors-img][🖐contrib-rocks].
 
-Also see GitLab Contributors: [https://gitlab.com/rubocop-lts/rubocop-lts-rspec/-/graphs/main][🚎contributors-gl]
+Also see GitLab Contributors: [https://gitlab.com/pboling/rubocop-lts-rspec/-/graphs/main][🚎contributors-gl]
 
-## ⭐️ Star History
+<details>
+ <summary>⭐️ Star History</summary>
 
-<a href="https://star-history.com/#rubocop-lts/rubocop-lts-rspec&Date">
+<a href="https://star-history.com/pboling/rubocop-lts-rspec&Date">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=rubocop-lts/rubocop-lts-rspec&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=rubocop-lts/rubocop-lts-rspec&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=rubocop-lts/rubocop-lts-rspec&type=Date" />
+ <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=pboling/rubocop-lts-rspec&type=Date&theme=dark" />
+ <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=pboling/rubocop-lts-rspec&type=Date" />
+ <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=pboling/rubocop-lts-rspec&type=Date" />
  </picture>
 </a>
 
+</details>
+
 ## 📌 Versioning
 
-This Library adheres to [![Semantic Versioning 2.0.0][📌semver-img]][📌semver].
-Violations of this scheme should be reported as bugs.
-Specifically, if a minor or patch version is released that breaks backward compatibility,
-a new version should be immediately released that restores compatibility.
-Breaking changes to the public API will only be introduced with new major versions.
-
-### 📌 Is "Platform Support" part of the public API?
-
-Yes.  But I'm obligated to include notes...
-
-SemVer should, but doesn't explicitly, say that dropping support for specific Platforms
-is a *breaking change* to an API.
-It is obvious to many, but not all, and since the spec is silent, the bike shedding is endless.
-
-> dropping support for a platform is both obviously and objectively a breaking change
-
-- Jordan Harband (@ljharb, maintainer of SemVer) [in SemVer issue 716][📌semver-breaking]
-
-To get a better understanding of how SemVer is intended to work over a project's lifetime,
-read this article from the creator of SemVer:
-
-- ["Major Version Numbers are Not Sacred"][📌major-versions-not-sacred]
-
-As a result of this policy, and the interpretive lens used by the maintainer,
-you can (and should) specify a dependency on these libraries using
-the [Pessimistic Version Constraint][📌pvc] with two digits of precision.
+This library follows [![Semantic Versioning 2.0.0][📌semver-img]][📌semver] for its public API where practical.
+For most applications, prefer the [Pessimistic Version Constraint][📌pvc] with two digits of precision.
 
 For example:
 
@@ -423,75 +343,115 @@ For example:
 spec.add_dependency("rubocop-lts-rspec", "~> 1.0")
 ```
 
-See [CHANGELOG.md][📌changelog] for list of releases.
+<details markdown="1">
+<summary>📌 Is "Platform Support" part of the public API? More details inside.</summary>
+
+Dropping support for a platform can be a breaking change for affected users.
+If a release changes supported platforms, it should be called out clearly in the changelog and versioned with that impact in mind.
+
+To get a better understanding of how SemVer is intended to work over a project's lifetime,
+read this article from the creator of SemVer:
+
+- ["Major Version Numbers are Not Sacred"][📌major-versions-not-sacred]
+
+</details>
+
+See [CHANGELOG.md][📌changelog] for a list of releases.
 
 ## 📄 License
 
 The gem is available as open source under the terms of
-the [MIT License][📄license] [![License: MIT][📄license-img]][📄license-ref].
-See [LICENSE.txt][📄license] for the official [Copyright Notice][📄copyright-notice-explainer].
-
-<details>
-  <summary>Project Logos (rubocop-lts-rspec)</summary>
-
-See [docs/images/logo/README.txt][project-logos]
-
-</details>
-
-<details>
-  <summary>Organization Logo (rubocop-lts)</summary>
-
-- Author: [Yusuf Evli][org-logo-author]
-- Source: [Unsplash][org-logo-source]
-- License: [Unsplash License][org-logo-license]
-
-</details>
-
-[project-logos]: https://github.com/rubocop-lts/rubocop-lts-rspec/blob/main/docs/images/logo/README.txt
-[org-logo-author]: https://unsplash.com/@yusufevli
-[org-logo-source]: https://unsplash.com/photos/yaSLNLtKRIU
-[org-logo-license]: https://unsplash.com/license
+the [MIT](MIT.md) [![License: MIT][📄license-img]][📄license-ref].
 
 ### © Copyright
 
-<p>
-  Copyright (c) 2025 Peter H. Boling,
-  <a href="https://railsbling.com">
-    RailsBling.com
-    <picture>
-      <img alt="Rails Bling" height="20" src="https://railsbling.com/images/logos/RailsBling-TrainLogo.svg" />
-    </picture>
-  </a>
-</p>
+See [LICENSE.md][📄license] for the official copyright notice.
 
-## 🤑 One more thing
+<details markdown="1">
+<summary>Copyright holders</summary>
 
-You made it to the bottom of the page,
-so perhaps you'll indulge me for another 20 seconds.
-I maintain many dozens of gems, including this one,
-because I want Ruby to be a great place for people to solve problems, big and small.
-Please consider supporting my efforts via the giant yellow link below,
-or one of the others at the head of this README.
+- Copyright (c) 2024-2026 Peter H. Boling
 
-[![Buy me a latte][🖇buyme-img]][🖇buyme]
+</details>
+
+## 🤑 A request for help
+
+Maintainers have teeth and need to pay their dentists.
+After getting laid off in an RIF in March, and encountering difficulty finding a new one,
+I began spending most of my time building open source tools.
+I'm hoping to be able to pay for my kids' health insurance this month,
+so if you value the work I am doing, I need your support.
+Please consider sponsoring me or the project.
+
+To join the community or get help 👇️ Join the Discord.
+
+[![Live Chat on Discord][✉️discord-invite-img-ftb]][✉️discord-invite]
+
+To say "thanks!" ☝️ Join the Discord or 👇️ send money.
+
+[![Sponsor pboling/rubocop-lts-rspec on Open Source Collective][🖇osc-all-bottom-img]][🖇osc] 💌 [![Sponsor me on GitHub Sponsors][🖇sponsor-bottom-img]][🖇sponsor] 💌 [![Sponsor me on Liberapay][⛳liberapay-bottom-img]][⛳liberapay] 💌 [![Donate on PayPal][🖇paypal-bottom-img]][🖇paypal]
+
+### Please give the project a star ⭐ ♥.
+
+Many parts of this project are actively managed by a [kettle-jem](https://github.com/structuredmerge/structuredmerge-ruby/tree/main/gems/kettle-jem) smart template utilizing [StructuredMerge.org](https://structuredmerge.org) merge contracts.
+
+Thanks for RTFM. ☺️
+
+[⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay&color=a51611&style=flat
+[⛳liberapay-bottom-img]: https://img.shields.io/liberapay/goal/pboling.svg?style=for-the-badge&logo=liberapay&color=a51611
+[⛳liberapay]: https://liberapay.com/pboling/donate
+[🖇osc-all-img]: https://img.shields.io/opencollective/all/pboling
+[🖇osc-sponsors-img]: https://img.shields.io/opencollective/sponsors/pboling
+[🖇osc-backers-img]: https://img.shields.io/opencollective/backers/pboling
+[🖇osc-backers]: https://opencollective.com/pboling#backer
+[🖇osc-backers-i]: https://opencollective.com/pboling/backers/badge.svg?style=flat
+[🖇osc-sponsors]: https://opencollective.com/pboling#sponsor
+[🖇osc-sponsors-i]: https://opencollective.com/pboling/sponsors/badge.svg?style=flat
+[🖇osc-all-bottom-img]: https://img.shields.io/opencollective/all/pboling?style=for-the-badge
+[🖇osc-sponsors-bottom-img]: https://img.shields.io/opencollective/sponsors/pboling?style=for-the-badge
+[🖇osc-backers-bottom-img]: https://img.shields.io/opencollective/backers/pboling?style=for-the-badge
+[🖇osc]: https://opencollective.com/pboling
+[🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
+[🖇sponsor-bottom-img]: https://img.shields.io/badge/Sponsor_Me!-pboling-blue?style=for-the-badge&logo=github
+[🖇sponsor]: https://github.com/sponsors/pboling
+[🖇polar-img]: https://img.shields.io/badge/polar-donate-a51611.svg?style=flat
+[🖇polar]: https://polar.sh/pboling
+[🖇kofi-img]: https://img.shields.io/badge/ko--fi-%E2%9C%93-a51611.svg?style=flat
+[🖇kofi]: https://ko-fi.com/pboling
+[🖇patreon-img]: https://img.shields.io/badge/patreon-donate-a51611.svg?style=flat
+[🖇patreon]: https://patreon.com/galtzo
+[🖇buyme-small-img]: https://img.shields.io/badge/buy_me_a_coffee-%E2%9C%93-a51611.svg?style=flat
+[🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
+[🖇buyme]: https://www.buymeacoffee.com/pboling
+[🖇paypal-img]: https://img.shields.io/badge/donate-paypal-a51611.svg?style=flat&logo=paypal
+[🖇paypal-bottom-img]: https://img.shields.io/badge/donate-paypal-a51611.svg?style=for-the-badge&logo=paypal&color=0A0A0A
+[🖇paypal]: https://www.paypal.com/paypalme/peterboling
+[🖇floss-funding.dev]: https://floss-funding.dev
+[🖇floss-funding-gem]: https://github.com/galtzo-floss/floss_funding
+[✉️discord-invite]: https://discord.gg/3qme4XHNKN
+[✉️discord-invite-img-ftb]: https://img.shields.io/discord/1373797679469170758?style=for-the-badge&logo=discord
+[✉️ruby-friends-img]: https://img.shields.io/badge/daily.dev-%F0%9F%92%8E_Ruby_Friends-0A0A0A?style=for-the-badge&logo=dailydotdev&logoColor=white
+[✉️ruby-friends]: https://app.daily.dev/squads/rubyfriends
 
 [✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
-[⛳️gem-namespace]: https://github.com/rubocop-lts/rubocop-lts-rspec/blob/main/lib/masq.rb
-[⛳️namespace-img]: https://img.shields.io/badge/namespace-Rubocop%3A%3ALts%3A%3ARspec-brightgreen.svg?style=flat&logo=ruby&logoColor=white
-[⛳️gem-name]: https://rubygems.org/gems/rubocop-lts-rspec
-[⛳️name-img]: https://img.shields.io/badge/name-rubocop--lts--rspec-brightgreen.svg?style=flat&logo=rubygems&logoColor=red
-[🚂bdfl-blog]: http://www.railsbling.com/tags/rubocop-lts-rspec
-[🚂bdfl-blog-img]: https://img.shields.io/badge/blog-railsbling-0093D0.svg?style=for-the-badge&logo=rubyonrails&logoColor=orange
-[🚂bdfl-contact]: http://www.railsbling.com/contact
-[🚂bdfl-contact-img]: https://img.shields.io/badge/Contact-BDFL-0093D0.svg?style=flat&logo=rubyonrails&logoColor=red
+[⛳️gem-namespace]: https://github.com/pboling/rubocop-lts-rspec
+[⛳️namespace-img]: https://img.shields.io/badge/namespace-Rubocop::Lts::Rspec-3C2D2D.svg?style=square&logo=ruby&logoColor=white
+[⛳️gem-name]: https://bestgems.org/gems/rubocop-lts-rspec
+[⛳️name-img]: https://img.shields.io/badge/name-rubocop--lts--rspec-3C2D2D.svg?style=square&logo=rubygems&logoColor=red
+[⛳️tag-img]: https://img.shields.io/github/tag/pboling/rubocop-lts-rspec.svg
+[⛳️tag]: https://github.com/pboling/rubocop-lts-rspec/releases
+[🚂maint-blog]: http://www.railsbling.com/tags/rubocop-lts-rspec
+[🚂maint-blog-img]: https://img.shields.io/badge/blog-railsbling-0093D0.svg?style=for-the-badge&logo=rubyonrails&logoColor=orange
+[🚂maint-contact]: http://www.railsbling.com/contact
+[🚂maint-contact-img]: https://img.shields.io/badge/Contact-Maintainer-0093D0.svg?style=flat&logo=rubyonrails&logoColor=red
 [💖🖇linkedin]: http://www.linkedin.com/in/peterboling
-[💖🖇linkedin-img]: https://img.shields.io/badge/PeterBoling-LinkedIn-0B66C2?style=flat&logo=newjapanprowrestling
-[💖✌️wellfound]: https://angel.co/u/peter-boling
+[💖🖇linkedin-img]: https://img.shields.io/badge/LinkedIn-Profile-0B66C2?style=flat&logo=newjapanprowrestling
+[💖✌️wellfound]: https://wellfound.com/u/peter-boling
 [💖✌️wellfound-img]: https://img.shields.io/badge/peter--boling-orange?style=flat&logo=wellfound
 [💖💲crunchbase]: https://www.crunchbase.com/person/peter-boling
 [💖💲crunchbase-img]: https://img.shields.io/badge/peter--boling-purple?style=flat&logo=crunchbase
 [💖🐘ruby-mast]: https://ruby.social/@galtzo
-[💖🐘ruby-mast-img]: https://img.shields.io/mastodon/follow/109447111526622197?domain=https%3A%2F%2Fruby.social&style=flat&logo=mastodon&label=Ruby%20%40galtzo
+[💖🐘ruby-mast-img]: https://img.shields.io/mastodon/follow/109447111526622197?domain=https://ruby.social&style=flat&logo=mastodon&label=Ruby%20@galtzo
 [💖🦋bluesky]: https://bsky.app/profile/galtzo.com
 [💖🦋bluesky-img]: https://img.shields.io/badge/@galtzo.com-0285FF?style=flat&logo=bluesky&logoColor=white
 [💖🌳linktree]: https://linktr.ee/galtzo
@@ -508,104 +468,126 @@ or one of the others at the head of this README.
 [👨🏼‍🏫expsup-upwork-img]: https://img.shields.io/badge/UpWork-13544E?style=for-the-badge&logo=Upwork&logoColor=white
 [👨🏼‍🏫expsup-codementor]: https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github
 [👨🏼‍🏫expsup-codementor-img]: https://img.shields.io/badge/CodeMentor-Get_Help-1abc9c?style=for-the-badge&logo=CodeMentor&logoColor=white
-[🏙️entsup-tidelift]: https://tidelift.com/subscription
+[🏙️entsup-tidelift]: https://tidelift.com/subscription/pkg/rubygems-rubocop-lts-rspec?utm_source=rubygems-rubocop-lts-rspec&utm_medium=referral&utm_campaign=readme
 [🏙️entsup-tidelift-img]: https://img.shields.io/badge/Tidelift_and_Sonar-Enterprise_Support-FD3456?style=for-the-badge&logo=sonar&logoColor=white
 [🏙️entsup-tidelift-sonar]: https://blog.tidelift.com/tidelift-joins-sonar
 [💁🏼‍♂️peterboling]: http://www.peterboling.com
 [🚂railsbling]: http://www.railsbling.com
 [📜src-gl-img]: https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&logo=Gitlab&logoColor=orange
-[📜src-gl]: https://gitlab.com/rubocop-lts/rubocop-lts-rspec/
+[📜src-gl]: https://gitlab.com/pboling/rubocop-lts-rspec
+[📜src-cb-img]: https://img.shields.io/badge/CodeBerg-4893CC?style=for-the-badge&logo=CodeBerg&logoColor=blue
+[📜src-cb]: https://codeberg.org/pboling/rubocop-lts-rspec
 [📜src-gh-img]: https://img.shields.io/badge/GitHub-238636?style=for-the-badge&logo=Github&logoColor=green
-[📜src-gh]: https://github.com/rubocop-lts/rubocop-lts-rspec/
+[📜src-gh]: https://github.com/pboling/rubocop-lts-rspec
 [📜docs-cr-rd-img]: https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
-[📜docs-head-rd-img]: https://img.shields.io/badge/RubyDoc-HEAD-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
-[📜wiki]: https://gitlab.com/rubocop-lts/rubocop-lts-rspec/-/wikis/home
-[📜wiki-img]: https://img.shields.io/badge/wiki-examples-943CD2.svg?style=for-the-badge&logo=Wiki&logoColor=white
-[👽dl-rank]: https://rubygems.org/gems/rubocop-lts-rspec
+[📜docs-head-rd-img]: https://img.shields.io/badge/YARD_on_Galtzo.com-HEAD-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
+[📜gl-wiki]: https://gitlab.com/pboling/rubocop-lts-rspec/-/wikis/home
+[📜gh-wiki]: https://github.com/pboling/rubocop-lts-rspec/wiki
+[📜gl-wiki-img]: https://img.shields.io/badge/wiki-gitlab-943CD2.svg?style=for-the-badge&logo=gitlab&logoColor=white
+[📜gh-wiki-img]: https://img.shields.io/badge/wiki-github-943CD2.svg?style=for-the-badge&logo=github&logoColor=white
+[👽dl-rank]: https://bestgems.org/gems/rubocop-lts-rspec
 [👽dl-ranki]: https://img.shields.io/gem/rd/rubocop-lts-rspec.svg
-[👽oss-help]: https://www.codetriage.com/rubocop-lts/rubocop-lts-rspec
-[👽oss-helpi]: https://www.codetriage.com/rubocop-lts/rubocop-lts-rspec/badges/users.svg
-[👽version]: https://rubygems.org/gems/rubocop-lts-rspec
+[👽version]: https://bestgems.org/gems/rubocop-lts-rspec
 [👽versioni]: https://img.shields.io/gem/v/rubocop-lts-rspec.svg
-[🔑cc-mnt]: https://qlty.sh/gh/rubocop-lts/projects/rubocop-lts-rspec
-[🔑cc-mnti♻️]: https://qlty.sh/badges/4daa5208-3ae5-457c-b601-10de129d17b1/maintainability.svg
-[🔑cc-cov]: https://qlty.sh/gh/rubocop-lts/projects/rubocop-lts-rspec
-[🔑cc-covi♻️]: https://qlty.sh/badges/4daa5208-3ae5-457c-b601-10de129d17b1/test_coverage.svg
-[🔑codecov]: https://codecov.io/gh/rubocop-lts/rubocop-lts-rspec
-[🔑codecovi♻️]: https://codecov.io/gh/rubocop-lts/rubocop-lts-rspec/branch/main/graph/badge.svg?token=l44un82aUp
-[🔑coveralls]: https://coveralls.io/github/rubocop-lts/rubocop-lts-rspec?branch=main
-[🔑coveralls-img]: https://coveralls.io/repos/github/rubocop-lts/rubocop-lts-rspec/badge.svg?branch=main
-[🔑depfu]: https://depfu.com/github/rubocop-lts/rubocop-lts-rspec?project_id=60302
-[🔑depfui♻️]: https://badges.depfu.com/badges/31479c66ece5143367e8d3d50aef18b5/count.svg
-[🖐codeQL]: https://github.com/rubocop-lts/rubocop-lts-rspec/security/code-scanning
-[🖐codeQL-img]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/codeql-analysis.yml/badge.svg
-[🚎1-an-wf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/ancient.yml
-[🚎1-an-wfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/ancient.yml/badge.svg
-[🚎2-cov-wf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/coverage.yml
-[🚎2-cov-wfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/coverage.yml/badge.svg
-[🚎3-hd-wf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/heads.yml
-[🚎3-hd-wfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/heads.yml/badge.svg
-[🚎5-st-wf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/style.yml
-[🚎5-st-wfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/style.yml/badge.svg
-[🚎6-s-wf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/supported.yml
-[🚎6-s-wfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/supported.yml/badge.svg
-[🚎8-df-wf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/dogfood.yml
-[🚎8-df-wfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/dogfood.yml/badge.svg
-[🚎11-c-wf]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/current.yml
-[🚎11-c-wfi]: https://github.com/rubocop-lts/rubocop-lts-rspec/actions/workflows/current.yml/badge.svg
-[⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay
-[⛳liberapay]: https://liberapay.com/pboling/donate
-[🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
-[🖇sponsor]: https://github.com/sponsors/pboling
-[🖇polar-img]: https://img.shields.io/badge/polar-donate-yellow.svg
-[🖇polar]: https://polar.sh/pboling
-[🖇kofi-img]: https://img.shields.io/badge/a_more_different_coffee-✓-yellow.svg
-[🖇kofi]: https://ko-fi.com/O5O86SNP4
-[🖇patreon-img]: https://img.shields.io/badge/patreon-donate-yellow.svg
-[🖇patreon]: https://patreon.com/galtzo
-[🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
-[🖇buyme]: https://www.buymeacoffee.com/pboling
-[🖇buyme-small-img]: https://img.shields.io/badge/buy_me_a_coffee-✓-yellow.svg?style=flat
-[💎ruby-2.7i]: https://img.shields.io/badge/Ruby-2.7-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-3.0i]: https://img.shields.io/badge/Ruby-3.0-CC342D?style=for-the-badge&logo=ruby&logoColor=white
-[💎ruby-3.1i]: https://img.shields.io/badge/Ruby-3.1-CC342D?style=for-the-badge&logo=ruby&logoColor=white
+[🏀qlty-mnt]: https://qlty.sh/gh/pboling/projects/rubocop-lts-rspec
+[🏀qlty-mnti]: https://qlty.sh/gh/pboling/projects/rubocop-lts-rspec/maintainability.svg
+[🏀qlty-cov]: https://qlty.sh/gh/pboling/projects/rubocop-lts-rspec/metrics/code?sort=coverageRating
+[🏀qlty-covi]: https://qlty.sh/gh/pboling/projects/rubocop-lts-rspec/coverage.svg
+[🏀codecov]: https://codecov.io/gh/pboling/rubocop-lts-rspec
+[🏀codecovi]: https://codecov.io/gh/pboling/rubocop-lts-rspec/graph/badge.svg
+[🏀coveralls]: https://coveralls.io/github/pboling/rubocop-lts-rspec?branch=main
+[🏀coveralls-img]: https://coveralls.io/repos/github/pboling/rubocop-lts-rspec/badge.svg?branch=main
+[🚎ruby-3.2-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/ruby-3.2.yml
+[🚎ruby-3.3-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/ruby-3.3.yml
+[🚎ruby-3.4-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/ruby-3.4.yml
+[🚎truby-24.2-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/truffleruby-24.2.yml
+[🚎truby-25.0-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/truffleruby-25.0.yml
+[🚎2-cov-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/coverage.yml
+[🚎2-cov-wfi]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/coverage.yml/badge.svg
+[🚎3-hd-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/heads.yml
+[🚎3-hd-wfi]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/heads.yml/badge.svg
+[🚎5-st-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/style.yml
+[🚎5-st-wfi]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/style.yml/badge.svg
+[🚎9-t-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/truffle.yml
+[🚎9-t-wfi]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/truffle.yml/badge.svg
+[🚎10-j-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/jruby.yml
+[🚎10-j-wfi]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/jruby.yml/badge.svg
+[🚎11-c-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/current.yml
+[🚎11-c-wfi]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/current.yml/badge.svg
+[🚎12-crh-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/dep-heads.yml
+[🚎12-crh-wfi]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/dep-heads.yml/badge.svg
+[🚎13-🔒️-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/locked_deps.yml
+[🚎13-🔒️-wfi]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/locked_deps.yml/badge.svg
+[🚎14-🔓️-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/unlocked_deps.yml
+[🚎14-🔓️-wfi]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/unlocked_deps.yml/badge.svg
+[🚎15-🪪-wf]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/license-eye.yml
+[🚎15-🪪-wfi]: https://github.com/pboling/rubocop-lts-rspec/actions/workflows/license-eye.yml/badge.svg
 [💎ruby-3.2i]: https://img.shields.io/badge/Ruby-3.2-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-3.3i]: https://img.shields.io/badge/Ruby-3.3-CC342D?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-3.4i]: https://img.shields.io/badge/Ruby-3.4-CC342D?style=for-the-badge&logo=ruby&logoColor=white
+[💎ruby-4.0i]: https://img.shields.io/badge/Ruby-4.0-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-c-i]: https://img.shields.io/badge/Ruby-current-CC342D?style=for-the-badge&logo=ruby&logoColor=green
 [💎ruby-headi]: https://img.shields.io/badge/Ruby-HEAD-CC342D?style=for-the-badge&logo=ruby&logoColor=blue
-[🤝issues]: https://github.com/rubocop-lts/rubocop-lts-rspec/issues
-[🤝pulls]: https://github.com/rubocop-lts/rubocop-lts-rspec/pulls
-[🤝contributing]: CONTRIBUTING.md
-[🔑codecov-g♻️]: https://codecov.io/gh/rubocop-lts/rubocop-lts-rspec/graphs/tree.svg?token=l44un82aUp
+[💎truby-24.2i]: https://img.shields.io/badge/Truffle_Ruby-24.2-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
+[💎truby-25.0i]: https://img.shields.io/badge/Truffle_Ruby-25.0-34BCB1?style=for-the-badge&logo=ruby&logoColor=pink
+[💎truby-c-i]: https://img.shields.io/badge/Truffle_Ruby-current-34BCB1?style=for-the-badge&logo=ruby&logoColor=green
+[💎jruby-c-i]: https://img.shields.io/badge/JRuby-current-FBE742?style=for-the-badge&logo=ruby&logoColor=green
+[💎jruby-headi]: https://img.shields.io/badge/JRuby-HEAD-FBE742?style=for-the-badge&logo=ruby&logoColor=blue
+[🤝gh-issues]: https://github.com/pboling/rubocop-lts-rspec/issues
+[🤝gh-pulls]: https://github.com/pboling/rubocop-lts-rspec/pulls
+[🤝gl-issues]: https://gitlab.com/pboling/rubocop-lts-rspec/-/issues
+[🤝gl-pulls]: https://gitlab.com/pboling/rubocop-lts-rspec/-/merge_requests
+[🤝cb-issues]: https://codeberg.org/pboling/rubocop-lts-rspec/issues
+[🤝cb-pulls]: https://codeberg.org/pboling/rubocop-lts-rspec/pulls
+[🤝cb-donate]: https://donate.codeberg.org/
+[🤝contributing]: https://github.com/pboling/rubocop-lts-rspec/blob/main/CONTRIBUTING.md
+[🏀codecov-g]: https://codecov.io/gh/pboling/rubocop-lts-rspec/graph/badge.svg
 [🖐contrib-rocks]: https://contrib.rocks
-[🖐contributors]: https://github.com/rubocop-lts/rubocop-lts-rspec/graphs/contributors
-[🖐contributors-img]: https://contrib.rocks/image?repo=rubocop-lts/rubocop-lts-rspec
-[🚎contributors-gl]: https://gitlab.com/rubocop-lts/rubocop-lts-rspec/-/graphs/main
-[🪇conduct]: CODE_OF_CONDUCT.md
-[🪇conduct-img]: https://img.shields.io/badge/Contributor_Covenant-2.1-4baaaa.svg
+[🖐contributors]: https://github.com/pboling/rubocop-lts-rspec/graphs/contributors
+[🖐contributors-img]: https://contrib.rocks/image?repo=pboling/rubocop-lts-rspec
+[🚎contributors-gl]: https://gitlab.com/pboling/rubocop-lts-rspec/-/graphs/main
+[🪇conduct]: https://github.com/pboling/rubocop-lts-rspec/blob/main/CODE_OF_CONDUCT.md
+[🪇conduct-img]: https://img.shields.io/badge/Contributor_Covenant-2.1-259D6C.svg
 [📌pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
 [📌semver]: https://semver.org/spec/v2.0.0.html
-[📌semver-img]: https://img.shields.io/badge/semver-2.0.0-FFDD67.svg?style=flat
+[📌semver-img]: https://img.shields.io/badge/semver-2.0.0-259D6C.svg?style=flat
 [📌semver-breaking]: https://github.com/semver/semver/issues/716#issuecomment-869336139
 [📌major-versions-not-sacred]: https://tom.preston-werner.com/2022/05/23/major-version-numbers-are-not-sacred.html
-[📌changelog]: CHANGELOG.md
+[📌changelog]: https://github.com/pboling/rubocop-lts-rspec/blob/main/CHANGELOG.md
 [📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
-[📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
-[📌gitmoji]:https://gitmoji.dev
-[📌gitmoji-img]:https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square
+[📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-34495e.svg?style=flat
+[📌gitmoji]: https://gitmoji.dev
+[📌gitmoji-img]: https://img.shields.io/badge/gitmoji_commits-%20%F0%9F%98%9C%20%F0%9F%98%8D-34495e.svg?style=flat-square
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.018-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
-[🔐security]: SECURITY.md
-[🔐security-img]: https://img.shields.io/badge/security-policy-brightgreen.svg?style=flat
+[🧮kloc-img]: https://img.shields.io/badge/KLOC-5.053-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
+[🔐security]: https://github.com/pboling/rubocop-lts-rspec/blob/main/SECURITY.md
+[🔐security-img]: https://img.shields.io/badge/security-policy-259D6C.svg?style=flat
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
-[📄license]: LICENSE.txt
-[📄license-ref]: https://opensource.org/licenses/MIT
-[📄license-img]: https://img.shields.io/badge/License-MIT-green.svg
+[📄license]: LICENSE.md
+[📄license-ref]: MIT.md
+[📄license-img]: https://img.shields.io/badge/License-MIT-259D6C.svg
+[📄license-compat]: https://www.apache.org/legal/resolved.html#category-a
+[📄license-compat-img]: https://img.shields.io/badge/Apache_Compatible:_Category_A-✓-259D6C.svg?style=flat&logo=Apache
+
 [📄ilo-declaration]: https://www.ilo.org/declaration/lang--en/index.htm
-[📄ilo-declaration-img]: https://img.shields.io/badge/ILO_Fundamental_Principles-✓-brightgreen.svg?style=flat
+[📄ilo-declaration-img]: https://img.shields.io/badge/ILO_Fundamental_Principles-✓-259D6C.svg?style=flat
 [🚎yard-current]: http://rubydoc.info/gems/rubocop-lts-rspec
-[🚎yard-head]: https://rubydoc.info/github/rubocop-lts/rubocop-lts-rspec/main
-[💎stone_checksums]: https://github.com/pboling/stone_checksums
-[💎SHA_checksums]: https://github.com/rubocop-lts/rubocop-lts-rspec/tree/main/checksums
+[🚎yard-head]: https://rubocop-lts-rspec.galtzo.com
+[💎stone_checksums]: https://github.com/galtzo-floss/stone_checksums
+[💎SHA_checksums]: https://gitlab.com/pboling/rubocop-lts-rspec/-/tree/main/checksums
 [💎rlts]: https://github.com/rubocop-lts/rubocop-lts
-[💎rlts-img]: https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?plastic&logo=ruby&logoColor=white
+[💎rlts-img]: https://img.shields.io/badge/code_style_&_linting-rubocop--lts-34495e.svg?plastic&logo=ruby&logoColor=white
+[💎appraisal2]: https://github.com/appraisal-rb/appraisal2
+[💎appraisal2-img]: https://img.shields.io/badge/appraised_by-appraisal2-34495e.svg?plastic&logo=ruby&logoColor=white
+[💎d-in-dvcs]: https://railsbling.com/posts/dvcs/put_the_d_in_dvcs/
+
+<!-- kettle-jem:metadata:start -->
+| Field | Value |
+|---|---|
+| Package | rubocop-lts-rspec |
+| Description | Enables Ruby projects that test with RSpec to more confidently support even the most finely-aged Rubies.<br>Part of the rubocop-lts family. |
+| Homepage | https://github.com/pboling/rubocop-lts-rspec |
+| Source | https://github.com/pboling/rubocop-lts-rspec/tree/v1.0.3 |
+| License | `MIT` |
+| Funding | https://github.com/sponsors/pboling, https://issuehunt.io/u/pboling, https://ko-fi.com/pboling, https://liberapay.com/pboling/donate, https://opencollective.com/rubocop-lts, https://patreon.com/galtzo, https://polar.sh/pboling, https://thanks.dev/u/gh/pboling, https://tidelift.com/funding/github/rubygems/rubocop-lts-rspec, https://www.buymeacoffee.com/pboling |
+<!-- kettle-jem:metadata:end -->
