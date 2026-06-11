@@ -243,7 +243,7 @@ and [Tidelift][🏙️entsup-tidelift].
 
 ### Open Collective for Individuals
 
-Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/pboling#backer)]
+Support us with a monthly donation and help us continue our activities. [[Become a backer](https://opencollective.com/rubocop-lts#backer)]
 
 NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day, automatically.
 
@@ -253,7 +253,7 @@ No backers yet. Be the first!
 
 ### Open Collective for Organizations
 
-Become a sponsor and get your logo on our README on GitHub with a link to your site. [[Become a sponsor](https://opencollective.com/pboling#sponsor)]
+Become a sponsor and get your logo on our README on GitHub with a link to your site. [[Become a sponsor](https://opencollective.com/rubocop-lts#sponsor)]
 
 NOTE: [kettle-readme-backers][kettle-readme-backers] updates this list every day, automatically.
 
@@ -389,7 +389,7 @@ To join the community or get help 👇️ Join the Discord.
 
 To say "thanks!" ☝️ Join the Discord or 👇️ send money.
 
-[![Sponsor pboling/rubocop-lts-rspec on Open Source Collective][🖇osc-all-bottom-img]][🖇osc] 💌 [![Sponsor me on GitHub Sponsors][🖇sponsor-bottom-img]][🖇sponsor] 💌 [![Sponsor me on Liberapay][⛳liberapay-bottom-img]][⛳liberapay] 💌 [![Donate on PayPal][🖇paypal-bottom-img]][🖇paypal]
+[![Sponsor rubocop-lts/rubocop-lts-rspec on Open Source Collective][🖇osc-all-bottom-img]][🖇osc] 💌 [![Sponsor me on GitHub Sponsors][🖇sponsor-bottom-img]][🖇sponsor] 💌 [![Sponsor me on Liberapay][⛳liberapay-bottom-img]][⛳liberapay] 💌 [![Donate on PayPal][🖇paypal-bottom-img]][🖇paypal]
 
 ### Please give the project a star ⭐ ♥.
 
@@ -400,17 +400,17 @@ Thanks for RTFM. ☺️
 [⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay&color=a51611&style=flat
 [⛳liberapay-bottom-img]: https://img.shields.io/liberapay/goal/pboling.svg?style=for-the-badge&logo=liberapay&color=a51611
 [⛳liberapay]: https://liberapay.com/pboling/donate
-[🖇osc-all-img]: https://img.shields.io/opencollective/all/pboling
-[🖇osc-sponsors-img]: https://img.shields.io/opencollective/sponsors/pboling
-[🖇osc-backers-img]: https://img.shields.io/opencollective/backers/pboling
-[🖇osc-backers]: https://opencollective.com/pboling#backer
-[🖇osc-backers-i]: https://opencollective.com/pboling/backers/badge.svg?style=flat
-[🖇osc-sponsors]: https://opencollective.com/pboling#sponsor
-[🖇osc-sponsors-i]: https://opencollective.com/pboling/sponsors/badge.svg?style=flat
-[🖇osc-all-bottom-img]: https://img.shields.io/opencollective/all/pboling?style=for-the-badge
-[🖇osc-sponsors-bottom-img]: https://img.shields.io/opencollective/sponsors/pboling?style=for-the-badge
-[🖇osc-backers-bottom-img]: https://img.shields.io/opencollective/backers/pboling?style=for-the-badge
-[🖇osc]: https://opencollective.com/pboling
+[🖇osc-all-img]: https://img.shields.io/opencollective/all/rubocop-lts
+[🖇osc-sponsors-img]: https://img.shields.io/opencollective/sponsors/rubocop-lts
+[🖇osc-backers-img]: https://img.shields.io/opencollective/backers/rubocop-lts
+[🖇osc-backers]: https://opencollective.com/rubocop-lts#backer
+[🖇osc-backers-i]: https://opencollective.com/rubocop-lts/backers/badge.svg?style=flat
+[🖇osc-sponsors]: https://opencollective.com/rubocop-lts#sponsor
+[🖇osc-sponsors-i]: https://opencollective.com/rubocop-lts/sponsors/badge.svg?style=flat
+[🖇osc-all-bottom-img]: https://img.shields.io/opencollective/all/rubocop-lts?style=for-the-badge
+[🖇osc-sponsors-bottom-img]: https://img.shields.io/opencollective/sponsors/rubocop-lts?style=for-the-badge
+[🖇osc-backers-bottom-img]: https://img.shields.io/opencollective/backers/rubocop-lts?style=for-the-badge
+[🖇osc]: https://opencollective.com/rubocop-lts
 [🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
 [🖇sponsor-bottom-img]: https://img.shields.io/badge/Sponsor_Me!-pboling-blue?style=for-the-badge&logo=github
 [🖇sponsor]: https://github.com/sponsors/pboling
@@ -587,7 +587,7 @@ Thanks for RTFM. ☺️
 | Package | rubocop-lts-rspec |
 | Description | Enables Ruby projects that test with RSpec to more confidently support even the most finely-aged Rubies.<br>Part of the rubocop-lts family. |
 | Homepage | https://github.com/pboling/rubocop-lts-rspec |
-| Source | https://github.com/pboling/rubocop-lts-rspec/tree/v1.0.3 |
+| Source | https://github.com/pboling/rubocop-lts-rspec/tree/v1.0.4 |
 | License | `MIT` |
 | Funding | https://github.com/sponsors/pboling, https://issuehunt.io/u/pboling, https://ko-fi.com/pboling, https://liberapay.com/pboling/donate, https://opencollective.com/rubocop-lts, https://patreon.com/galtzo, https://polar.sh/pboling, https://thanks.dev/u/gh/pboling, https://tidelift.com/funding/github/rubygems/rubocop-lts-rspec, https://www.buymeacoffee.com/pboling |
 <!-- kettle-jem:metadata:end -->
