@@ -8,7 +8,12 @@
 #       The rescue LoadError handles that scenario.
 begin
   require "kettle-soup-cover"
-  require "simplecov" if Kettle::Soup::Cover::DO_COV # `.simplecov` is run here!
+  if Kettle::Soup::Cover::DO_COV
+    # Requiring simplecov loads the project-local `.simplecov`.
+    require "simplecov"
+    require "kettle/soup/cover/config"
+    SimpleCov.start
+  end
 rescue LoadError => error
   # check the error message and re-raise when unexpected
   raise error unless error.message.include?("kettle")
@@ -27,8 +32,6 @@ require "version_gem/rspec"
 # RSpec Configs
 require "config/rspec/rspec_core"
 require "config/rspec/rspec_block_is_expected"
-
-require "simplecov" if Kettle::Soup::Cover::DO_COV
 
 # This gem
 require "rubocop-lts-rspec"
