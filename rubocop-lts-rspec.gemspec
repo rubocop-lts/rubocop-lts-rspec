@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
     Enables Ruby projects that test with RSpec to more confidently support even the most finely-aged Rubies.
     Part of the rubocop-lts family.
   DESC
-  spec.homepage = "https://github.com/pboling/rubocop-lts-rspec"
+  spec.homepage = "https://github.com/rubocop-lts/rubocop-lts-rspec"
   spec.licenses = ["MIT"]
   spec.required_ruby_version = ">= 3.2.0"
 

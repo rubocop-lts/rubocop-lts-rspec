@@ -12,9 +12,9 @@ authors:
     orcid: 'https://orcid.org/0009-0008-8519-441X'
 identifiers:
   - type: url
-    value: 'https://github.com/pboling/rubocop-lts-rspec'
+    value: 'https://github.com/rubocop-lts/rubocop-lts-rspec'
     description: "rubocop-lts-rspec"
-repository-code: 'https://github.com/pboling/rubocop-lts-rspec'
+repository-code: 'https://github.com/rubocop-lts/rubocop-lts-rspec'
 abstract: >-
   rubocop-lts-rspec
 license: See license file
