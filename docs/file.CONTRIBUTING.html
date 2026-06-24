@@ -61,9 +61,9 @@
 
       <div id="content"><div id='filecontents'><h1 id="contributing">Contributing</h1>
 
-<p>Bug reports and pull requests are welcome on <a href="https://codeberg.org/pboling/rubocop-lts-rspec">CodeBerg</a>, <a href="https://gitlab.com/pboling/rubocop-lts-rspec">GitLab</a>, or <a href="https://github.com/pboling/rubocop-lts-rspec">GitHub</a>.<br>
+<p>Bug reports and pull requests are welcome on <a href="https://codeberg.org/rubocop-lts/rubocop-lts-rspec">CodeBerg</a>, <a href="https://gitlab.com/rubocop-lts/rubocop-lts-rspec">GitLab</a>, or <a href="https://github.com/rubocop-lts/rubocop-lts-rspec">GitHub</a>.<br>
 This project should be a safe, welcoming space for collaboration, so contributors agree to adhere to<br>
-the <a href="https://github.com/pboling/rubocop-lts-rspec/blob/main/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
+the <a href="https://github.com/rubocop-lts/rubocop-lts-rspec/blob/main/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
 
 <p>To submit a patch, please fork the project, create a patch with tests, and send a pull request.</p>
 
@@ -187,7 +187,7 @@ Tip: When running a single spec file locally, you may want <code>K_SOUP_COV_MIN_
   <li>Git hosting forges generally ignore external diff drivers, so pull request views may still show raw textual diffs even when local <code>git diff</code> uses semantic drivers.</li>
 </ul>
 
-<pre class="code language-console"><code class="language-console">K_JEM_TEMPLATING=true bundle exec kettle-jem install
+<pre class="code language-console"><code class="language-console">K_JEM_TEMPLATING=true kettle-jem install
 </code></pre>
 
 <p>Troubleshooting Git diffs</p>
@@ -195,7 +195,7 @@ Tip: When running a single spec file locally, you may want <code>K_SOUP_COV_MIN_
   <li>Use <code>git diff --no-ext-diff</code> to compare against Git’s built-in diff output.</li>
   <li>Use <code>git diff --no-textconv</code> when a textconv projection obscures the raw file bytes you need to inspect.</li>
   <li>If Git reports a missing <code>smorg-*</code> executable, rerun <code>bundle install</code> and the setup command above, then check <code>git config --local --get-regexp '^diff\.smorg-'</code>.</li>
-  <li>To remove managed local entries, run <code>K_JEM_TEMPLATING=true bundle exec kettle-jem install --undo</code>; remove global command registrations with <code>git config --global --unset-all diff.smorg-ruby.command</code>.</li>
+  <li>To remove managed local entries, run <code>K_JEM_TEMPLATING=true kettle-jem install --undo</code>; remove global command registrations with <code>git config --global --unset-all diff.smorg-ruby.command</code>.</li>
 </ul>
 
 <p>For a quick starting point, this repository’s <code>mise.toml</code> defines the shared defaults, and <code>.env.local</code> can override them locally. Copy <code>.env.local.example</code> to <code>.env.local</code>, use <code>KEY=value</code> lines, and either activate <code>mise</code> in your shell or run commands through <code>mise exec -C /path/to/project -- ...</code>.</p>
@@ -277,11 +277,11 @@ pass/fail count, failing example list, and SimpleCov coverage percentages.</p>
 
 <p>Your picture could be here!</p>
 
-<p><a href="https://github.com/pboling/rubocop-lts-rspec/graphs/contributors"><img src="https://contrib.rocks/image?repo=pboling/rubocop-lts-rspec" alt="Contributors"></a></p>
+<p><a href="https://github.com/rubocop-lts/rubocop-lts-rspec/graphs/contributors"><img src="https://contrib.rocks/image?repo=rubocop-lts/rubocop-lts-rspec" alt="Contributors"></a></p>
 
 <p>Made with <a href="https://contrib.rocks">contributors-img</a>.</p>
 
-<p>Also see GitLab Contributors: <a href="https://gitlab.com/pboling/rubocop-lts-rspec/-/graphs/main">https://gitlab.com/pboling/rubocop-lts-rspec/-/graphs/main</a></p>
+<p>Also see GitLab Contributors: <a href="https://gitlab.com/rubocop-lts/rubocop-lts-rspec/-/graphs/main">https://gitlab.com/rubocop-lts/rubocop-lts-rspec/-/graphs/main</a></p>
 
 <h2 id="for-maintainers">For Maintainers</h2>
 
@@ -317,7 +317,7 @@ See: <a href="https://guides.rubygems.org/security/#building-gems">RubyGems Secu
   <li>Run <code>git commit -am "🔖 Prepare release v&lt;VERSION&gt;"</code> to commit the changes</li>
   <li>Run <code>git push</code> to trigger the final CI pipeline before release, and merge PRs
     <ul>
-      <li>NOTE: Remember to <a href="https://github.com/pboling/rubocop-lts-rspec/actions">check the build</a>.</li>
+      <li>NOTE: Remember to <a href="https://github.com/rubocop-lts/rubocop-lts-rspec/actions">check the build</a>.</li>
     </ul>
   </li>
   <li>Run <code>export GIT_TRUNK_BRANCH_NAME="$(git remote show origin | grep 'HEAD branch' | cut -d ' ' -f5)" &amp;&amp; echo $GIT_TRUNK_BRANCH_NAME</code>
@@ -357,7 +357,7 @@ push git commits and tags, and push the <code>.gem</code> file to the gem host c
 </div></div>
 
       <div id="footer">
-  Generated on Mon Jun  8 01:17:24 2026 by
+  Generated on Tue Jun 23 19:47:09 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>
