@@ -57,13 +57,14 @@ Gem::Specification.new do |spec|
   end
 
   # Specify which files are part of the released package.
-  spec.files = [
+  spec.files = Dir[
     # Splats (alphabetical)
     "config/**/*.yml",
     "lib/**/*.rb",
-    "sig/**/*.rbs",
+    "sig/**/*.rbs"
+  ] + [
     # Files (alphabetical)
-    "rubocop.yml",
+    ".rubocop.yml",
     # Code / tasks / data (NOTE: exe/ is specified via spec.bindir and spec.executables below)
     *enumerate_package_files.call("lib"),
     # Executables and executable support scripts
