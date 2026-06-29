@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    rubocop-lts-rspec (1.0.6)
+    rubocop-lts-rspec (1.0.4)
       rubocop (~> 1.84, >= 1.84.2)
       rubocop-env (~> 0.1, >= 0.1.0)
       rubocop-factory_bot (~> 2.28, >= 2.28.0)
