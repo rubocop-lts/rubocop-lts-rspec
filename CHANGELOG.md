@@ -30,16 +30,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Security
 
-## [1.0.6] - 2026-06-28
+## [1.0.4] - 2026-06-28
 
-- TAG: [v1.0.6][1.0.6t]
-- COVERAGE: 100.00% -- 16/16 lines in 3 files
-- BRANCH COVERAGE: 0.00% -- 0/0 branches in 3 files
-- 57.14% documented
-
-## [1.0.5] - 2026-06-26
-
-- TAG: [v1.0.5][1.0.5t]
+- TAG: [v1.0.4][1.0.4t]
 - COVERAGE: 100.00% -- 16/16 lines in 3 files
 - BRANCH COVERAGE: 0.00% -- 0/0 branches in 3 files
 - 57.14% documented
@@ -111,11 +104,13 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.6...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.4...HEAD
 [1.0.6]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.5...v1.0.6
 [1.0.6t]: https://github.com/rubocop-lts/rubocop-lts-rspec/releases/tag/v1.0.6
 [1.0.5]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.3...v1.0.5
 [1.0.5t]: https://github.com/rubocop-lts/rubocop-lts-rspec/releases/tag/v1.0.5
+[1.0.4]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.3...v1.0.4
+[1.0.4t]: https://github.com/rubocop-lts/rubocop-lts-rspec/releases/tag/v1.0.4
 [1.0.3]: https://gitlab.com/rubocop-lts/rubocop-lts-rspec/-/compare/v1.0.2...v1.0.3
 [1.0.2]: https://gitlab.com/rubocop-lts/rubocop-lts-rspec/-/compare/v1.0.1...v1.0.2
 [1.0.1]: https://gitlab.com/rubocop-lts/rubocop-lts-rspec/-/compare/v1.0.0...v1.0.1
