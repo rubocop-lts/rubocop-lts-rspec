@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    rubocop-lts-rspec (1.0.4)
+    rubocop-lts-rspec (1.0.5)
       rubocop (~> 1.84, >= 1.84.2)
       rubocop-env (~> 0.1, >= 0.1.0)
       rubocop-factory_bot (~> 2.28, >= 2.28.0)
@@ -105,7 +105,7 @@ GEM
       ruby-progressbar (~> 1.13)
       version_gem (~> 1.1, >= 1.1.13)
     kettle-rb (0.1.1)
-    kettle-soup-cover (3.0.0.rc5)
+    kettle-soup-cover (3.0.0.rc6)
       simplecov (>= 1.0.pre)
       simplecov-cobertura (>= 4.0.pre)
       simplecov-console (~> 0.9, >= 0.9.5)
@@ -128,7 +128,7 @@ GEM
       rexml (>= 3.4.4)
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
-    language_server-protocol (3.17.0.5)
+    language_server-protocol (3.17.0.6)
     lint_roller (1.1.0)
     logger (1.7.0)
     mutex_m (0.3.0)
