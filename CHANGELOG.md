@@ -28,9 +28,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Fixed CI bootstrap for non-coverage appraisal bundles and restored the
-  Dogfood RuboCop Gradual task/config.
-
 ### Security
 
 ## [1.0.5] - 2026-07-03
@@ -43,6 +40,9 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 - Package configured license files in gem release file lists.
+
+- Fixed CI bootstrap for non-coverage appraisal bundles and restored the
+  Dogfood RuboCop Gradual task/config.
 
 ## [1.0.4] - 2026-06-28
 
