@@ -26,3 +26,8 @@ Style/HashSyntax:
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
   Enabled: true
+
+ThreadSafety/ClassInstanceVariable:
+  Enabled: true
+  Exclude:
+    - bin/bundle

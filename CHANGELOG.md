@@ -28,7 +28,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Fixed CI bootstrap for non-coverage appraisal bundles and the Dogfood workflow.
+- Fixed CI bootstrap for non-coverage appraisal bundles and restored the
+  Dogfood RuboCop Gradual task/config.
 
 ### Security
 
