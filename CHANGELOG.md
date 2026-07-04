@@ -28,6 +28,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Fixed CI bootstrap for non-coverage appraisal bundles and the Dogfood workflow.
+
 ### Security
 
 ## [1.0.5] - 2026-07-03
