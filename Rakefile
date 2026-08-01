@@ -6,7 +6,7 @@
 # kettle-jem will then preserve content between those markers across template runs.
 # kettle-jem:unfreeze
 
-# rubocop-lts-rspec Rakefile v7.0.0 - 2026-07-03
+# rubocop-lts-rspec Rakefile v7.1.0 - 2026-07-31
 # Ruby 2.3 (Safe Navigation) or higher required
 #
 # See LICENSE.md for license information.
@@ -51,6 +51,7 @@
 # rake spec                                   # Run RSpec code examples
 # rake test                                   # Run tests
 # rake yard                                   # Generate YARD Documentation
+# rake yard:lint                              # Lint YARD Documentation
 #
 
 # simplecov:disable
@@ -128,15 +129,6 @@ begin
 rescue LoadError
   warn("NOTE: kettle-dev isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
 end
-
-# kettle-jem:freeze
-namespace(:rubocop_gradual) do
-  desc("dogfood internal rubocop configs")
-  task(:dogfood) do
-    sh("bin/rubocop-gradual", "-c", ".rubocop-dogfood.yml")
-  end
-end
-# kettle-jem:unfreeze
 
 ### DUPLICATE DRIFT TASKS
 begin
