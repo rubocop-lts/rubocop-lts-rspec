@@ -3,7 +3,6 @@
 # external libs
 require "version_gem"
 require "rubocop"
-
 require_relative "rspec/version"
 
 # Namespace for this library
