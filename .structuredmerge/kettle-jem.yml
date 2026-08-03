@@ -97,28 +97,28 @@ dependency_conflicts:
     - gem: bundler-audit
       direct: rubocop-lts-rspec.gemspec
       modular: gemfiles/modular/audit.gemfile
-      action: review
-      reason: ""
+      action: remove_modular_gem
+      reason: "The gemspec owns the security audit development dependency; this modular declaration does not narrow or override it."
     - gem: rspec_junit_formatter
       direct: rubocop-lts-rspec.gemspec
       modular: gemfiles/modular/rspec.gemfile
-      action: review
-      reason: ""
+      action: keep_both
+      reason: "The gemspec supplies the released fallback while the RSpec modular Gemfile intentionally pins the GitHub revision used by the test matrix."
     - gem: rubocop-lts
       direct: rubocop-lts-rspec.gemspec
       modular: gemfiles/modular/style.gemfile
-      action: review
-      reason: ""
+      action: keep_both
+      reason: "The gemspec owns the visible development dependency while the MRI style Gemfile conditionally selects the current RuboCop-LTS tooling."
     - gem: rubocop-packaging
       direct: rubocop-lts-rspec.gemspec
       modular: gemfiles/modular/style.gemfile
-      action: review
-      reason: ""
+      action: remove_modular_gem
+      reason: "The gemspec owns this development dependency and the style Gemfile provides no distinct requirement or source override."
     - gem: yard
       direct: rubocop-lts-rspec.gemspec
       modular: gemfiles/modular/documentation.gemfile
-      action: review
-      reason: ""
+      action: remove_modular_gem
+      reason: "The gemspec owns the documentation dependency; the modular declaration does not narrow or override it."
 # This project's identifying emoji.
 # Used as the leading emoji in the README H1 heading and in the gemspec
 # summary and description. Every gem should have its own unique emoji.
