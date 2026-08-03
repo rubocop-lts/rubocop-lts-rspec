@@ -103,7 +103,7 @@ GEM
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
     json (2.20.0)
-    kettle-dev (2.5.17)
+    kettle-dev (2.5.18)
       emoji_regex (>= 15.0)
       kettle-gha-pins (~> 0.3, >= 0.3.5)
       kettle-ndjson (~> 0.1, >= 0.1.10)

@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 # external libs
-require "version_gem"
 require "rubocop"
-require_relative "rspec/version"
 
 # Namespace for this library
 # Configure / override standard's rules for use with rubocop-lts
@@ -16,8 +14,4 @@ module Rubocop
       class Error < StandardError; end
     end
   end
-end
-
-Rubocop::Lts::Rspec::Version.class_eval do
-  extend VersionGem::Basic
 end
