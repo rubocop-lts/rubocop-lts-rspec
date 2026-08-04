@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "anonymous_loader"
-require "rubocop/lts/rspec"
+require "rubocop-lts-rspec"
 RSpec.describe(Rubocop::Lts::Rspec::Version) do
   it_behaves_like "a Version module", described_class
 
