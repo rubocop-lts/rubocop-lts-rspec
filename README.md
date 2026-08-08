@@ -118,6 +118,15 @@ gem install rubocop-lts-rspec
 
 ## ⚙️ Configuration
 
+Select the RSpec profile through RuboCop's `inherit_gem` setting. For example:
+
+```yaml
+inherit_gem:
+  rubocop-lts-rspec: rspec.yml
+```
+
+The gem supplies configuration only; it has no runtime application settings.
+
 ## 🔧 Basic Usage
 
 ### Via `rubocop-lts` gem
