@@ -8,3 +8,21 @@ RSpec:
     Expectations:
       # Support for rspec-block_is_expected gem, without making it a dependency
       - block_is_expected
+
+# These paths contain behavior-level specs. Their group descriptions and
+# filenames describe workflows rather than a single class or method.
+RSpec/DescribeClass:
+  Exclude: &behavior_specs
+    - 'spec/acceptance/**/*'
+    - 'spec/e2e/**/*'
+    - 'spec/examples/**/*'
+    - 'spec/features/**/*'
+    - 'spec/integration/**/*'
+    - 'spec/requests/**/*'
+    - 'spec/system/**/*'
+
+RSpec/DescribeMethod:
+  Exclude: *behavior_specs
+
+RSpec/SpecFilePathFormat:
+  Exclude: *behavior_specs
