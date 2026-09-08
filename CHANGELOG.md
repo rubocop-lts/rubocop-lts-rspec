@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.0.6] - 2026-09-08
+
+- TAG: [v1.0.6][1.0.6t]
+- COVERAGE: 100.00% -- 16/16 lines in 3 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 3 files
+- 85.71% documented
+
+### Added
+
 - kettle-jem-template-20260720-005 - README Support & Community links now
   include RubyForum.
 - kettle-jem-template-20260726-001 - Projects now include YARD lint
@@ -56,10 +75,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - documentation (2)
   - other (13)
   - workflows (19)
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 
@@ -102,8 +117,6 @@ Please file a bug if you notice a violation of semantic versioning.
   preserving comments and trailing commas during template updates.
 
 - Exempt behavior-level RSpec suites from unit-spec description and filename conventions by path.
-
-### Security
 
 ## [1.0.5] - 2026-07-03
 
@@ -193,7 +206,7 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.5...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.6...HEAD
 [1.0.6]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.5...v1.0.6
 [1.0.6t]: https://github.com/rubocop-lts/rubocop-lts-rspec/releases/tag/v1.0.6
 [1.0.5]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.3...v1.0.5
