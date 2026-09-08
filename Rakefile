@@ -130,6 +130,15 @@ rescue LoadError
   warn("NOTE: kettle-dev isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
 end
 
+# kettle-jem:freeze
+namespace(:rubocop_gradual) do
+  desc("dogfood internal rubocop configs")
+  task(:dogfood) do
+    sh("bin/rubocop-gradual", "-c", ".rubocop-dogfood.yml")
+  end
+end
+# kettle-jem:unfreeze
+
 ### DUPLICATE DRIFT TASKS
 begin
   require "kettle/drift"
