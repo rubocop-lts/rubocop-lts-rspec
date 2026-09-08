@@ -11,6 +11,27 @@ PATH
       standard-rspec (~> 0.5, >= 0.5.0)
       version_gem (~> 1.1, >= 1.1.15)
 
+PATH
+  remote: /var/home/pboling/src/my/rubocop-lts/rubocop-ruby3_2
+  specs:
+    rubocop-ruby3_2 (3.0.8)
+      rubocop-gradual (~> 0.3, >= 0.3.6)
+      rubocop-md (~> 2.0, >= 2.0.4)
+      rubocop-rake (~> 0.7, >= 0.7.1)
+      rubocop-thread_safety (~> 0.7, >= 0.7.3)
+      standard-rubocop-lts (~> 2.0, >= 2.0.12)
+      version_gem (~> 1.1, >= 1.1.15)
+
+PATH
+  remote: /var/home/pboling/src/my/rubocop-lts/standard-rubocop-lts
+  specs:
+    standard-rubocop-lts (2.0.13)
+      rubocop-lts-ruby (~> 0.1, >= 0.1.0)
+      standard (~> 1.54, >= 1.54.0)
+      standard-custom (~> 1.0, >= 1.0.2)
+      standard-performance (~> 1.9, >= 1.9.0)
+      version_gem (~> 1.1, >= 1.1.15)
+
 GEM
   remote: https://gem.coop/
   specs:
@@ -420,13 +441,6 @@ GEM
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
       rubocop-rspec (~> 3.5)
-    rubocop-ruby3_2 (3.0.7)
-      rubocop-gradual (~> 0.3, >= 0.3.6)
-      rubocop-md (~> 2.0, >= 2.0.4)
-      rubocop-rake (~> 0.7, >= 0.7.1)
-      rubocop-thread_safety (~> 0.7, >= 0.7.3)
-      standard-rubocop-lts (~> 2.0, >= 2.0.9)
-      version_gem (~> 1.1, >= 1.1.13)
     rubocop-thread_safety (0.7.3)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
@@ -474,12 +488,6 @@ GEM
       rubocop-factory_bot (~> 2.27)
       rubocop-rspec (~> 3.9)
       rubocop-rspec_rails (~> 2.31)
-    standard-rubocop-lts (2.0.12)
-      rubocop-lts-ruby (~> 0.1, >= 0.1.0)
-      standard (~> 1.54, >= 1.54.0)
-      standard-custom (~> 1.0, >= 1.0.2)
-      standard-performance (~> 1.9, >= 1.9.0)
-      version_gem (~> 1.1, >= 1.1.15)
     stone_checksums (1.0.8)
     stringio (3.2.0)
     strings-ansi (0.2.0)
@@ -608,8 +616,9 @@ DEPENDENCIES
   rubocop-minitest (~> 0.40, >= 0.40.0)
   rubocop-on-rbs (~> 2.0, >= 2.0.0)
   rubocop-packaging (~> 0.6, >= 0.6.0)
-  rubocop-ruby3_2 (~> 3.0, >= 3.0.6)
+  rubocop-ruby3_2!
   ruby-progressbar (~> 1.13)
+  standard-rubocop-lts!
   stone_checksums (~> 1.0, >= 1.0.8)
   stringio (>= 3.0)
   turbo_tests2 (~> 3.2, >= 3.2.7)
@@ -638,7 +647,7 @@ CHECKSUMS
   bash-merge (7.1.8) sha256=d2ebebd32ecc03ac83dedc76b0b5bd0166af24fa3e26689a5c260749d4d184f2
   benchmark (0.5.0) sha256=465df122341aedcb81a2a24b4d3bd19b6c67c1530713fd533f3ff034e419236c
   bigdecimal (4.1.2) sha256=53d217666027eab4280346fba98e7d5b66baaae1b9c3c1c0ffe89d48188a3fbd
-  bundler (4.0.17) sha256=214e21431b5665dd2f99df8a5511c6b151d7a72e8015c8b38f8b775b61cbb6c1
+  bundler (4.0.20) sha256=7978a8ac648767f5e635bc522445b79e80a52b907a39a36c2d8085ed6bc762ae
   bundler-audit (0.9.3) sha256=81c8766c71e47d0d28a0f98c7eed028539f21a6ea3cd8f685eb6f42333c9b4e9
   cgi (0.5.2) sha256=61ca30298171190fd4fa0d8018e57ada456eae9b7a2b78526debf7f0a0e6f8bb
   citrus (3.0.2) sha256=4ec2412fc389ad186735f4baee1460f7900a8e130ffe3f216b30d4f9c684f650
@@ -760,7 +769,7 @@ CHECKSUMS
   rubocop-rspec (3.10.2) sha256=0b3e2ecc592cd10ecbf0095bb58d1e357905276e069643523cc19eb7495f65e2
   rubocop-rspec-extra (0.3.0) sha256=ee4b6484d0332a0d23c4a465eeb607e41888eb3d4ed479f850b9f5212514f787
   rubocop-rspec_rails (2.32.0) sha256=4a0d641c72f6ebb957534f539d9d0a62c47abd8ce0d0aeee1ef4701e892a9100
-  rubocop-ruby3_2 (3.0.7) sha256=f53dd6d286fb05186214fc6ec116783e7f837030918e8931c05de773e98f8466
+  rubocop-ruby3_2 (3.0.8)
   rubocop-thread_safety (0.7.3) sha256=067cdd52fbf5deffc18995437e45b5194236eaff4f71de3375a1f6052e48f431
   ruby-merge (7.1.8) sha256=e6a7cd320d6e78f6d1ba0a658e2e3f476fc26e09181d7d4da83c8fdbe8f525e0
   ruby-progressbar (1.13.0) sha256=80fc9c47a9b640d6834e0dc7b3c94c9df37f08cb072b7761e4a71e22cff29b33
@@ -778,7 +787,7 @@ CHECKSUMS
   standard-custom (1.0.2) sha256=424adc84179a074f1a2a309bb9cf7cd6bfdb2b6541f20c6bf9436c0ba22a652b
   standard-performance (1.9.0) sha256=49483d31be448292951d80e5e67cdcb576c2502103c7b40aec6f1b6e9c88e3f2
   standard-rspec (0.5.0) sha256=64d396524a65af47f5331b423d8cdd313e0267401647bb7892489ca89dad2973
-  standard-rubocop-lts (2.0.12) sha256=4b55efc56691d4edef197df8df27ffebdb4a273e26d7bf00799d00ac6a71532f
+  standard-rubocop-lts (2.0.13)
   stone_checksums (1.0.8) sha256=91c5453d6c67c468653bf5396a33936c85d7731077be756ed0ff7eb78f981117
   stringio (3.2.0) sha256=c37cb2e58b4ffbd33fe5cd948c05934af997b36e0b6ca6fdf43afa234cf222e1
   strings-ansi (0.2.0) sha256=90262d760ea4a94cc2ae8d58205277a343409c288cbe7c29416b1826bd511c88
