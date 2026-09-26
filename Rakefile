@@ -139,6 +139,8 @@ namespace(:rubocop_gradual) do
 end
 # kettle-jem:unfreeze
 
+# kettle-jem:unfreeze
+
 ### DUPLICATE DRIFT TASKS
 begin
   require "kettle/drift"
