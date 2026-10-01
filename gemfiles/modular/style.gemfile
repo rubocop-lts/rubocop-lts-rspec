@@ -18,11 +18,8 @@ platform :mri do
   if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("3.3.0")
     gem "rubocop-on-rbs", "~> 2.2", ">= 2.2.0"      # ruby >= 3.3.0
   end
+
   if ENV.fetch("RUBOCOP_LTS_DEV", "false").casecmp("false").zero?
-    # gem "rubocop", "~> 1.73", ">= 1.73.2" # constrained by standard
-    gem "rubocop-packaging",
-      github: "pboling/rubocop-packaging",
-      ref: "3539ba858d379740d638566faee9e56b2b854145"
     declared_gems = instance_variable_get(:@dependencies).to_a.map(&:name)
     gem "rubocop-lts", "~> 24.2", ">= 24.2.3" unless declared_gems.include?("rubocop-lts")
     gem "rubocop-ruby3_2", "~> 3.0", ">= 3.0.8" unless declared_gems.include?("rubocop-ruby3_2")

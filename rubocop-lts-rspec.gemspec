@@ -94,7 +94,7 @@ Gem::Specification.new do |spec|
     "^sig/",
     "--line-numbers",
     "--inline-source",
-    "--quiet"
+    "--quiet",
   ]
   spec.bindir = "exe"
   # Listed files are the relative paths from bindir above.
