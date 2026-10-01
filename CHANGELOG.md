@@ -20,6 +20,25 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.0.7] - 2026-10-01
+
+- TAG: [v1.0.7][1.0.7t]
+- COVERAGE: 100.00% -- 16/16 lines in 3 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 3 files
+- 85.71% documented
+
+### Added
+
 - kettle-jem-template-20260913-001 - Templating now also surfaces a review
   entry in `dependency_conflicts.resolve` when a direct development
   dependency doesn't support one or more of this project's declared
@@ -37,14 +56,6 @@ Please file a bug if you notice a violation of semantic versioning.
   - dependencies (4)
   - other (2)
   - workflows (19)
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [1.0.6] - 2026-09-09
 
@@ -222,7 +233,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.6...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.7...HEAD
+[1.0.7]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.6...v1.0.7
+[1.0.7t]: https://github.com/rubocop-lts/rubocop-lts-rspec/releases/tag/v1.0.7
 [1.0.6]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.5...v1.0.6
 [1.0.6t]: https://github.com/rubocop-lts/rubocop-lts-rspec/releases/tag/v1.0.6
 [1.0.5]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.3...v1.0.5
