@@ -126,8 +126,8 @@ dependency_conflicts:
     - gem: rubocop-packaging
       direct: rubocop-lts-rspec.gemspec
       modular: gemfiles/modular/style.gemfile
-      action: remove_modular_gem
-      reason: "The gemspec owns this development dependency and the style Gemfile provides no distinct requirement or source override."
+      action: keep_both
+      reason: "The gemspec constrains the compatible version; the modular declaration selects the required fork source."
     - gem: yard
       direct: rubocop-lts-rspec.gemspec
       modular: gemfiles/modular/documentation.gemfile
