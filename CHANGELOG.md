@@ -22,15 +22,17 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- [kc] kettle-jem/template: updated 6 project files:
+- [kc] kettle-jem/template: updated 7 project files:
   - dependencies (5)
-  - other (1)
+  - other (2)
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
+
+- license-eye workflow: make the `standard` gem license override versionless, so dependency bumps no longer break the license check with "standard | Unknown"
 
 ### Security
 
