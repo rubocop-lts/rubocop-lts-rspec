@@ -22,6 +22,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [1.0.8] - 2026-10-20
+
+- TAG: [v1.0.8][1.0.8t]
+- COVERAGE: 100.00% -- 16/16 lines in 3 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 3 files
+- 85.71% documented
+
+### Changed
+
 - [kc] kettle-jem/template: updated 26 project files:
   - dependencies (4)
   - documentation (2)
@@ -31,14 +48,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - [kc] kettle-jem/prepare: updated 10 project files:
   - configuration (1)
   - dependencies (9)
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
 
 ## [1.0.7] - 2026-10-01
 
@@ -243,7 +252,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.7...HEAD
+[Unreleased]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.8...HEAD
+[1.0.8]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.7...v1.0.8
+[1.0.8t]: https://github.com/rubocop-lts/rubocop-lts-rspec/releases/tag/v1.0.8
 [1.0.7]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.6...v1.0.7
 [1.0.7t]: https://github.com/rubocop-lts/rubocop-lts-rspec/releases/tag/v1.0.7
 [1.0.6]: https://github.com/rubocop-lts/rubocop-lts-rspec/compare/v1.0.5...v1.0.6
