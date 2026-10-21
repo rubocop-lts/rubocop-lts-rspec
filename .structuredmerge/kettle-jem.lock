@@ -16,12 +16,21 @@ template_state:
     - gemfiles/modular/templating_local.gemfile
     - rubocop-lts-rspec.gemspec
     kettle-jem/template:
+    - ".github/workflows/auto-assign.yml"
+    - ".github/workflows/dep-heads.yml"
+    - ".github/workflows/dogfood.yml"
+    - ".github/workflows/truffle.yml"
+    - ".github/workflows/truffleruby-24.2.yml"
+    - ".github/workflows/truffleruby-25.0.yml"
+    - ".github/workflows/truffleruby-33.0.yml"
     - ".licenserc.yaml"
     - ".simplecov"
     - Gemfile
+    - gemfiles/modular/coverage_local.gemfile
     - gemfiles/modular/documentation.gemfile
     - gemfiles/modular/style_local.gemfile
     - gemfiles/modular/templating.gemfile
+    - gemfiles/modular/templating_local.gemfile
     - rubocop-lts-rspec.gemspec
   checksums:
     ".aiignore.example": 48a5dfdd93afd1a15fdce39cc28ca9920263f00018b0968ab031fa744521e5ce
