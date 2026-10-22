@@ -22,21 +22,11 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- [kc] kettle-jem/template: updated 16 project files:
-  - dependencies (7)
-  - other (2)
-  - workflows (7)
-
-- [kc] kettle-jem/prepare: updated 7 project files:
-  - dependencies (7)
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
-
-- license-eye workflow: make the `standard` gem license override versionless, so dependency bumps no longer break the license check with "standard | Unknown"
 
 ### Security
 
@@ -49,15 +39,18 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- [kc] kettle-jem/template: updated 26 project files:
-  - dependencies (4)
+- [kc] kettle-jem/template: updated 42 project files:
+  - dependencies (11)
   - documentation (2)
-  - other (1)
-  - workflows (19)
-
-- [kc] kettle-jem/prepare: updated 10 project files:
+  - other (3)
+  - workflows (26)
+- [kc] kettle-jem/prepare: updated 17 project files:
   - configuration (1)
-  - dependencies (9)
+  - dependencies (16)
+
+### Fixed
+
+- license-eye workflow: make the `standard` gem license override versionless, so dependency bumps no longer break the license check with "standard | Unknown"
 
 ## [1.0.7] - 2026-10-01
 
